@@ -13,7 +13,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{BUSINESS_NAME}} | Next-Gen Digital, Cloud & Enterprise Solutions</title>
+  <title>{{BUSINESS_NAME}} | Luxury Real Estate, Commercial Properties & RERA Projects</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       font-family: 'Space Grotesk', sans-serif;
     }
 
-    /* GPU-Accelerated Interactive Cursor Canvas (Zero Lag) */
+    /* GPU-Accelerated Interactive Cursor Canvas (Zero Lag 120FPS) */
     #cursor-canvas {
       position: fixed;
       top: 0;
@@ -97,7 +97,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       background-color: rgba(255, 42, 133, 0.12);
     }
 
-    /* Animated Colorful Rainbow Gradient Text */
+    /* Animated Colorful Rainbow Gradient Text & Borders */
     @keyframes gradientFlow {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
@@ -116,7 +116,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       animation: gradientFlow 6s linear infinite;
     }
 
-    /* Ultra-Smooth 60FPS Interactive Cards */
+    /* Ultra-Smooth 120FPS Interactive Cards */
     .interactive-card {
       position: relative;
       will-change: transform;
@@ -188,35 +188,35 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       </div>
       <div class="flex items-center space-x-4">
         <span class="inline-flex items-center bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 px-3 py-1 rounded-full font-bold">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping mr-2"></span> ISO 27001 Verified Enterprise
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping mr-2"></span> RERA Certified & Verified Real Estate
         </span>
-        <button onclick="openModal('loginModal')" class="text-cyan-300 hover:text-white font-bold transition">Login</button>
-        <button onclick="openModal('signupModal')" class="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 hover:opacity-90 text-white font-extrabold px-4 py-1.5 rounded-full transition shadow-lg shadow-pink-500/30">Sign Up</button>
+        <button onclick="openModal('loginModal')" class="text-cyan-300 hover:text-white font-bold transition">Buyer Login</button>
+        <button onclick="openModal('signupModal')" class="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 hover:opacity-90 text-white font-extrabold px-4 py-1.5 rounded-full transition shadow-lg shadow-pink-500/30">List Property</button>
       </div>
     </div>
   </div>
 
-  <!-- 2. STICKY NAVBAR -->
+  <!-- 2. STICKY GLASSMORPHISM NAVBAR -->
   <header class="sticky top-0 z-40 bg-[#070714]/90 backdrop-blur-md border-b border-purple-500/25">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#" class="flex items-center space-x-3.5 group">
         <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-pink-500 via-purple-600 to-cyan-400 flex items-center justify-center text-white text-2xl shadow-lg shadow-purple-500/30 group-hover:scale-105 transition">
-          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <i class="fa-solid fa-building-wheat"></i>
         </div>
         <div>
           <span class="text-xl md:text-2xl font-black tracking-tight text-white block leading-none">{{BUSINESS_NAME}}</span>
-          <span class="text-[10px] font-extrabold uppercase tracking-widest rainbow-text">Digital, Cloud & AI Innovation</span>
+          <span class="text-[10px] font-extrabold uppercase tracking-widest rainbow-text">Luxury Properties & Real Estate Advisory</span>
         </div>
       </a>
 
       <nav class="hidden xl:flex items-center space-x-7 text-sm font-bold text-slate-200">
-        <a href="#about" class="hover:text-pink-400 transition">About Us</a>
-        <a href="#services" class="hover:text-cyan-400 transition">Services</a>
-        <a href="#ongoing" class="hover:text-amber-400 transition">Live Projects</a>
-        <a href="#portfolio" class="hover:text-emerald-400 transition">Portfolio</a>
-        <a href="#process" class="hover:text-purple-400 transition">Workflow</a>
-        <a href="#team" class="hover:text-pink-400 transition">Team</a>
-        <a href="#verification" class="hover:text-cyan-400 transition">Verification</a>
+        <a href="#featured" class="hover:text-pink-400 transition">Featured Properties</a>
+        <a href="#new-launches" class="hover:text-cyan-400 transition">New Launches</a>
+        <a href="#services" class="hover:text-amber-400 transition">Real Estate Services</a>
+        <a href="#about" class="hover:text-emerald-400 transition">About Agency</a>
+        <a href="#process" class="hover:text-purple-400 transition">Buying Guide</a>
+        <a href="#advisors" class="hover:text-pink-400 transition">Advisors</a>
+        <a href="#verification" class="hover:text-cyan-400 transition">Legal Info</a>
         <a href="#contact" class="hover:text-amber-400 transition">Contact</a>
       </nav>
 
@@ -225,19 +225,19 @@ HTML_TEMPLATE = """<!DOCTYPE html>
           <i class="fa-regular fa-user mr-2 text-pink-400"></i> Log In
         </button>
         <a href="#contact" class="inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 hover:opacity-95 text-white rounded-xl text-xs font-black uppercase tracking-wider shadow-lg shadow-cyan-500/25 transition">
-          Start Project <i class="fa-solid fa-bolt ml-2 text-amber-300"></i>
+          Book Site Visit <i class="fa-solid fa-key ml-2 text-amber-300"></i>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- 3. COLORFUL HERO SECTION WITH LIVE VIDEO -->
-  <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden px-6 py-20">
-    <!-- Live Video Background -->
+  <!-- 3. COLORFUL REAL ESTATE HERO SECTION WITH LIVE ARCHITECTURAL VIDEO -->
+  <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden px-6 py-16">
+    <!-- Live Luxury Real Estate / Skyline Video Background -->
     <div class="absolute inset-0 z-0">
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80" alt="Digital Background" class="w-full h-full object-cover opacity-30">
-      <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-40">
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-blue-connections-41662-large.mp4" type="video/mp4">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=85" alt="Luxury Mansion" class="w-full h-full object-cover opacity-35">
+      <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-45">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-city-buildings-on-a-sunny-day-41465-large.mp4" type="video/mp4">
       </video>
     </div>
 
@@ -247,154 +247,565 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <div class="absolute bottom-10 right-10 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none z-10"></div>
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-600/15 rounded-full blur-3xl pointer-events-none z-10"></div>
 
-    <div class="relative z-20 max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center w-full">
-      <div class="lg:col-span-7">
-        <div class="inline-flex items-center gap-2.5 bg-gradient-to-r from-pink-500/20 via-purple-500/20 to-cyan-500/20 border border-pink-500/40 px-4 py-2 rounded-full text-xs font-extrabold uppercase tracking-widest text-pink-300 mb-6 shadow-xl">
-          <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></span>
-          <span>360° Digital Transformation, Cloud & AI Studio</span>
-        </div>
-
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none mb-6 uppercase rainbow-text">
-          {{BUSINESS_NAME}}
-        </h1>
-
-        <div class="text-xl sm:text-2xl md:text-3xl font-bold text-slate-200 mb-6 min-h-[42px]">
-          <span class="text-amber-400">We Build: </span>
-          <span id="typewriter" class="text-white typing-cursor font-extrabold"></span>
-        </div>
-
-        <p class="text-base md:text-lg text-slate-300 max-w-2xl mb-10 leading-relaxed">
-          Transforming ambitious brands with ultra-fast web & mobile apps, custom cloud ERP software, AI business automation, and ROI-driven digital marketing from our head office at <strong class="text-cyan-300">{{ADDRESS}}</strong>.
-        </p>
-
-        <div class="flex flex-wrap gap-4 mb-10">
-          <a href="#services" class="bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 hover:opacity-95 text-white font-black px-8 py-4 rounded-2xl shadow-xl shadow-pink-500/25 transition transform hover:-translate-y-1 flex items-center">
-            <i class="fa-solid fa-rocket mr-2.5 text-amber-300"></i> Explore Colorful Solutions
-          </a>
-          <a href="#contact" class="bg-gradient-to-r from-cyan-500 to-emerald-500 hover:opacity-95 text-slate-950 font-black px-8 py-4 rounded-2xl shadow-xl shadow-cyan-500/25 transition transform hover:-translate-y-1 flex items-center">
-            <i class="fa-solid fa-phone-volume mr-2.5"></i> {{PHONE}}
-          </a>
-        </div>
-
-        <!-- Colorful Mini Stat Pills -->
-        <div class="grid grid-cols-3 gap-4 max-w-xl">
-          <div class="bg-pink-500/10 border border-pink-500/30 p-3.5 rounded-2xl text-center">
-            <div class="text-2xl sm:text-3xl font-black text-pink-400">380+</div>
-            <div class="text-[11px] text-slate-300 font-bold uppercase">Projects Live</div>
+    <div class="relative z-20 max-w-7xl mx-auto w-full">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2.5 bg-gradient-to-r from-pink-500/20 via-purple-500/20 to-cyan-500/20 border border-pink-500/40 px-4 py-2 rounded-full text-xs font-extrabold uppercase tracking-widest text-pink-300 mb-6 shadow-xl">
+            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></span>
+            <span>Premier Real Estate, Commercial & Luxury Property Portal</span>
           </div>
-          <div class="bg-cyan-500/10 border border-cyan-500/30 p-3.5 rounded-2xl text-center">
-            <div class="text-2xl sm:text-3xl font-black text-cyan-400">99.9%</div>
-            <div class="text-[11px] text-slate-300 font-bold uppercase">Uptime SLA</div>
+
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none mb-6 uppercase rainbow-text">
+            {{BUSINESS_NAME}}
+          </h1>
+
+          <div class="text-xl sm:text-2xl md:text-3xl font-bold text-slate-200 mb-6 min-h-[42px]">
+            <span class="text-amber-400">Discover: </span>
+            <span id="typewriter" class="text-white typing-cursor font-extrabold"></span>
           </div>
-          <div class="bg-amber-500/10 border border-amber-500/30 p-3.5 rounded-2xl text-center">
-            <div class="text-2xl sm:text-3xl font-black text-amber-400">24/7</div>
-            <div class="text-[11px] text-slate-300 font-bold uppercase">Expert Support</div>
+
+          <p class="text-base md:text-lg text-slate-300 max-w-2xl mb-8 leading-relaxed">
+            Your trusted destination for buying, selling, and leasing RERA-approved residential apartments, signature villas, high-ROI commercial retail spaces, and prime plots across India. Headquartered at <strong class="text-cyan-300">{{ADDRESS}}</strong>.
+          </p>
+
+          <div class="flex flex-wrap gap-4 mb-10">
+            <a href="#featured" class="bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 hover:opacity-95 text-white font-black px-8 py-4 rounded-2xl shadow-xl shadow-pink-500/25 transition transform hover:-translate-y-1 flex items-center">
+              <i class="fa-solid fa-house-chimney-window mr-2.5 text-amber-300"></i> Explore Luxury Properties
+            </a>
+            <a href="#contact" class="bg-gradient-to-r from-cyan-500 to-emerald-500 hover:opacity-95 text-slate-950 font-black px-8 py-4 rounded-2xl shadow-xl shadow-cyan-500/25 transition transform hover:-translate-y-1 flex items-center">
+              <i class="fa-solid fa-phone-volume mr-2.5"></i> {{PHONE}}
+            </a>
+          </div>
+
+          <!-- Colorful Mini Stat Pills -->
+          <div class="grid grid-cols-3 gap-4 max-w-xl">
+            <div class="bg-pink-500/10 border border-pink-500/30 p-3.5 rounded-2xl text-center">
+              <div class="text-2xl sm:text-3xl font-black text-pink-400">1,450+</div>
+              <div class="text-[11px] text-slate-300 font-bold uppercase">Properties Sold</div>
+            </div>
+            <div class="bg-cyan-500/10 border border-cyan-500/30 p-3.5 rounded-2xl text-center">
+              <div class="text-2xl sm:text-3xl font-black text-cyan-400">100%</div>
+              <div class="text-[11px] text-slate-300 font-bold uppercase">Clear Title & RERA</div>
+            </div>
+            <div class="bg-amber-500/10 border border-amber-500/30 p-3.5 rounded-2xl text-center">
+              <div class="text-2xl sm:text-3xl font-black text-amber-400">0%</div>
+              <div class="text-[11px] text-slate-300 font-bold uppercase">Hidden Charges</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Colorful Floating Penthouse Showcase Card -->
+        <div class="lg:col-span-5">
+          <div class="p-[2px] rounded-3xl rainbow-border shadow-2xl animate-float">
+            <div class="bg-[#0b0b1e] rounded-3xl p-6">
+              <div class="relative h-72 rounded-2xl overflow-hidden mb-5">
+                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1000&q=85" alt="Signature Villa" class="w-full h-full object-cover">
+                <span class="absolute top-4 left-4 bg-gradient-to-r from-pink-500 to-amber-500 text-white text-[11px] font-black uppercase px-3.5 py-1 rounded-full shadow-lg">
+                  <i class="fa-solid fa-crown mr-1"></i> Spotlight Property
+                </span>
+                <span class="absolute top-4 right-4 bg-emerald-500 text-slate-950 text-xs font-black px-3 py-1 rounded-lg">
+                  ₹ 3.25 Cr*
+                </span>
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0b0b1e] via-[#0b0b1e]/60 to-transparent p-5">
+                  <h3 class="text-xl font-black text-white">The Imperial Sky-Villa & Penthouse</h3>
+                  <p class="text-xs text-cyan-300 mt-0.5"><i class="fa-solid fa-location-dot mr-1"></i> Prime Luxury Sector • 4,200 Sq.Ft. • 5 BHK</p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-3 gap-3 mb-4 text-center">
+                <div class="bg-purple-900/40 p-3 rounded-xl border border-pink-500/30">
+                  <div class="text-[10px] text-pink-200 uppercase font-bold">Configuration</div>
+                  <div class="text-sm font-black text-white mt-0.5">4 & 5 BHK</div>
+                </div>
+                <div class="bg-cyan-900/40 p-3 rounded-xl border border-cyan-500/30">
+                  <div class="text-[10px] text-cyan-200 uppercase font-bold">Possession</div>
+                  <div class="text-sm font-black text-emerald-400 mt-0.5">Ready To Move</div>
+                </div>
+                <div class="bg-amber-900/40 p-3 rounded-xl border border-amber-500/30">
+                  <div class="text-[10px] text-amber-200 uppercase font-bold">Rental Yield</div>
+                  <div class="text-sm font-black text-amber-300 mt-0.5">8.5% ROI</div>
+                </div>
+              </div>
+
+              <button onclick="openModal('visitModal')" class="w-full bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 hover:opacity-95 text-white font-black py-3.5 rounded-xl transition shadow-lg">
+                <i class="fa-solid fa-calendar-check mr-2"></i> Schedule Private Site Visit
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Hero Right Colorful Floating Card -->
-      <div class="lg:col-span-5">
-        <div class="p-[2px] rounded-3xl rainbow-border shadow-2xl animate-float">
-          <div class="bg-[#0b0b1e] rounded-3xl p-6">
-            <div class="relative h-72 rounded-2xl overflow-hidden mb-5">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" alt="Analytics Hub" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-gradient-to-t from-[#0b0b1e] via-transparent to-transparent flex flex-col justify-end p-5">
-                <span class="bg-gradient-to-r from-pink-500 to-amber-500 text-white text-[10px] font-black uppercase px-3 py-1 rounded-full w-max mb-2">Live Cloud Engine</span>
-                <h3 class="text-xl font-black text-white">Real-Time Performance & Growth</h3>
-              </div>
+      <!-- INTERACTIVE PROPERTY SEARCH & FILTER BAR (NEXUSPROPERTY STYLE) -->
+      <div class="mt-14 p-[2px] rounded-3xl rainbow-border shadow-2xl">
+        <div class="bg-[#0a0a1c]/95 backdrop-blur-xl rounded-3xl p-6 sm:p-8">
+          <form onsubmit="event.preventDefault(); document.getElementById('featured').scrollIntoView({behavior: 'smooth'});" class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 items-end">
+            <div>
+              <label class="block text-xs font-extrabold uppercase text-pink-400 mb-2"><i class="fa-solid fa-tags mr-1.5"></i> Looking To</label>
+              <select class="w-full bg-[#12122b] border border-purple-500/40 rounded-xl px-4 py-3.5 text-sm font-bold text-white focus:outline-none focus:border-pink-500">
+                <option>Buy Property</option>
+                <option>Commercial Lease</option>
+                <option>New Launch Investment</option>
+                <option>Plot / Land Purchase</option>
+              </select>
             </div>
-
-            <div class="grid grid-cols-2 gap-4 mb-4">
-              <div class="bg-gradient-to-br from-purple-900/50 to-pink-900/30 p-4 rounded-2xl border border-pink-500/30">
-                <div class="text-xs text-pink-200 font-semibold">Client ROI Growth</div>
-                <div class="text-2xl font-black text-amber-300">+340% Avg</div>
-              </div>
-              <div class="bg-gradient-to-br from-cyan-900/50 to-blue-900/30 p-4 rounded-2xl border border-cyan-500/30">
-                <div class="text-xs text-cyan-200 font-semibold">Cloud Speed Score</div>
-                <div class="text-2xl font-black text-emerald-400">99 / 100</div>
-              </div>
+            <div>
+              <label class="block text-xs font-extrabold uppercase text-cyan-400 mb-2"><i class="fa-solid fa-building mr-1.5"></i> Property Category</label>
+              <select class="w-full bg-[#12122b] border border-cyan-500/40 rounded-xl px-4 py-3.5 text-sm font-bold text-white focus:outline-none focus:border-cyan-400">
+                <option>Luxury Apartment / Penthouse</option>
+                <option>Independent Villa / Bungalow</option>
+                <option>Commercial Office / Retail Shop</option>
+                <option>Residential / Industrial Plot</option>
+              </select>
             </div>
-
-            <div class="flex items-center justify-between text-xs bg-white/5 px-4 py-3 rounded-xl border border-white/10">
-              <span class="text-emerald-300 font-bold"><i class="fa-solid fa-circle-check mr-2"></i>Verified Legal Entity</span>
-              <a href="#verification" class="text-amber-400 font-extrabold hover:underline">Check Registry →</a>
+            <div>
+              <label class="block text-xs font-extrabold uppercase text-amber-400 mb-2"><i class="fa-solid fa-indian-rupee-sign mr-1.5"></i> Budget Range</label>
+              <select class="w-full bg-[#12122b] border border-amber-500/40 rounded-xl px-4 py-3.5 text-sm font-bold text-white focus:outline-none focus:border-amber-400">
+                <option>₹ 50 Lakhs - ₹ 1.50 Cr</option>
+                <option>₹ 1.50 Cr - ₹ 3.00 Cr</option>
+                <option>₹ 3.00 Cr - ₹ 7.50 Cr</option>
+                <option>Above ₹ 7.50 Cr (Ultra Luxury)</option>
+              </select>
             </div>
-          </div>
+            <div>
+              <label class="block text-xs font-extrabold uppercase text-emerald-400 mb-2"><i class="fa-solid fa-certificate mr-1.5"></i> Project Status</label>
+              <select class="w-full bg-[#12122b] border border-emerald-500/40 rounded-xl px-4 py-3.5 text-sm font-bold text-white focus:outline-none focus:border-emerald-400">
+                <option>Ready to Move In</option>
+                <option>Under Construction (RERA)</option>
+                <option>Pre-Launch Offer</option>
+              </select>
+            </div>
+            <div>
+              <button type="submit" class="w-full bg-gradient-to-r from-pink-500 via-purple-600 to-cyan-500 hover:opacity-95 text-white font-black py-3.5 px-6 rounded-xl shadow-lg shadow-pink-500/30 transition flex items-center justify-center">
+                <i class="fa-solid fa-magnifying-glass mr-2"></i> Search Properties
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. VIBRANT RAINBOW MARQUEE TICKER -->
+  <!-- 4. VIBRANT RAINBOW REAL ESTATE MARQUEE TICKER -->
   <div class="bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 py-4 overflow-hidden shadow-lg">
     <div class="animate-marquee space-x-12 text-sm font-black uppercase tracking-wider text-white">
-      <span><i class="fa-solid fa-star text-amber-300 mr-2"></i>Custom Web & Mobile App Development</span>
-      <span><i class="fa-solid fa-fire text-amber-300 mr-2"></i>AI Chatbots & WhatsApp Automation</span>
-      <span><i class="fa-solid fa-bolt text-amber-300 mr-2"></i>Cloud Server & DevOps Engineering</span>
-      <span><i class="fa-solid fa-chart-pie text-amber-300 mr-2"></i>Performance Google & Meta Ads</span>
-      <span><i class="fa-solid fa-cubes text-amber-300 mr-2"></i>Enterprise ERP, CRM & Billing Software</span>
-      <span><i class="fa-solid fa-shield-halved text-amber-300 mr-2"></i>Cybersecurity & ISO Compliance</span>
-      <span><i class="fa-solid fa-star text-amber-300 mr-2"></i>Custom Web & Mobile App Development</span>
-      <span><i class="fa-solid fa-fire text-amber-300 mr-2"></i>AI Chatbots & WhatsApp Automation</span>
-      <span><i class="fa-solid fa-bolt text-amber-300 mr-2"></i>Cloud Server & DevOps Engineering</span>
-      <span><i class="fa-solid fa-chart-pie text-amber-300 mr-2"></i>Performance Google & Meta Ads</span>
+      <span><i class="fa-solid fa-building-circle-check text-amber-300 mr-2"></i>100% RERA Registered Luxury Apartments</span>
+      <span><i class="fa-solid fa-gem text-amber-300 mr-2"></i>Signature Gated Villas & Penthouses</span>
+      <span><i class="fa-solid fa-shop text-amber-300 mr-2"></i>High-Footfall Commercial Retail & Offices</span>
+      <span><i class="fa-solid fa-map-location-dot text-amber-300 mr-2"></i>Clear-Title Residential & Industrial Plots</span>
+      <span><i class="fa-solid fa-handshake text-amber-300 mr-2"></i>Instant Home Loan & Registry Assistance</span>
+      <span><i class="fa-solid fa-chart-line text-amber-300 mr-2"></i>Assured High Rental Yield Investments</span>
+      <span><i class="fa-solid fa-building-circle-check text-amber-300 mr-2"></i>100% RERA Registered Luxury Apartments</span>
+      <span><i class="fa-solid fa-gem text-amber-300 mr-2"></i>Signature Gated Villas & Penthouses</span>
+      <span><i class="fa-solid fa-shop text-amber-300 mr-2"></i>High-Footfall Commercial Retail & Offices</span>
+      <span><i class="fa-solid fa-map-location-dot text-amber-300 mr-2"></i>Clear-Title Residential & Industrial Plots</span>
     </div>
   </div>
 
-  <!-- 5. 4 MULTI-COLOR METRIC CARDS -->
+  <!-- 5. 4 MULTI-COLOR REAL ESTATE METRIC CARDS -->
   <section class="py-20 px-6 max-w-7xl mx-auto">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
       <div class="interactive-card bg-gradient-to-br from-pink-600/20 to-rose-900/20 border-2 border-pink-500/40 p-8 rounded-3xl text-center">
         <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-pink-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-pink-500/40">
-          <i class="fa-solid fa-laptop-code"></i>
+          <i class="fa-solid fa-key"></i>
         </div>
-        <div class="text-4xl md:text-5xl font-black text-white mb-1">380+</div>
-        <div class="text-xs font-extrabold uppercase tracking-widest text-pink-400">Platforms Delivered</div>
+        <div class="text-4xl md:text-5xl font-black text-white mb-1">1,450+</div>
+        <div class="text-xs font-extrabold uppercase tracking-widest text-pink-400">Properties Handed Over</div>
       </div>
 
       <div class="interactive-card bg-gradient-to-br from-cyan-600/20 to-blue-900/20 border-2 border-cyan-500/40 p-8 rounded-3xl text-center">
-        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-cyan-500 text-slate-950 flex items-center justify-center text-2xl shadow-lg shadow-cyan-500/40">
-          <i class="fa-solid fa-users-gear"></i>
+        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-cyan-400 text-slate-950 flex items-center justify-center text-2xl shadow-lg shadow-cyan-400/40">
+          <i class="fa-solid fa-city"></i>
         </div>
-        <div class="text-4xl md:text-5xl font-black text-white mb-1">150+</div>
-        <div class="text-xs font-extrabold uppercase tracking-widest text-cyan-400">Tech Specialists</div>
+        <div class="text-4xl md:text-5xl font-black text-white mb-1">12.5M+</div>
+        <div class="text-xs font-extrabold uppercase tracking-widest text-cyan-400">Sq.Ft. Area Transacted</div>
       </div>
 
       <div class="interactive-card bg-gradient-to-br from-amber-500/20 to-orange-900/20 border-2 border-amber-500/40 p-8 rounded-3xl text-center">
-        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center text-2xl shadow-lg shadow-amber-500/40">
-          <i class="fa-solid fa-trophy"></i>
+        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center text-2xl shadow-lg shadow-amber-400/40">
+          <i class="fa-solid fa-face-smile-beam"></i>
         </div>
-        <div class="text-4xl md:text-5xl font-black text-white mb-1">99.9%</div>
-        <div class="text-xs font-extrabold uppercase tracking-widest text-amber-400">Client Retention</div>
+        <div class="text-4xl md:text-5xl font-black text-white mb-1">4,800+</div>
+        <div class="text-xs font-extrabold uppercase tracking-widest text-amber-400">Happy Property Owners</div>
       </div>
 
       <div class="interactive-card bg-gradient-to-br from-emerald-500/20 to-teal-900/20 border-2 border-emerald-500/40 p-8 rounded-3xl text-center">
-        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-emerald-500 text-slate-950 flex items-center justify-center text-2xl shadow-lg shadow-emerald-500/40">
-          <i class="fa-solid fa-shield-check"></i>
+        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-emerald-400 text-slate-950 flex items-center justify-center text-2xl shadow-lg shadow-emerald-400/40">
+          <i class="fa-solid fa-shield-halved"></i>
         </div>
         <div class="text-4xl md:text-5xl font-black text-white mb-1">100%</div>
-        <div class="text-xs font-extrabold uppercase tracking-widest text-emerald-400">Verified Security</div>
+        <div class="text-xs font-extrabold uppercase tracking-widest text-emerald-400">Legal Title Verified</div>
       </div>
     </div>
   </section>
 
-  <!-- 6. ABOUT US WITH COLORFUL FRAMES -->
-  <section id="about" class="py-24 px-6 max-w-7xl mx-auto">
-    <div class="grid lg:grid-cols-12 gap-14 items-center">
+  <!-- 6. FEATURED LUXURY PROPERTIES (6 GIANT HD REAL ESTATE CARDS) -->
+  <section id="featured" class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+      <div>
+        <span class="bg-gradient-to-r from-pink-500 to-purple-600 text-white font-extrabold uppercase tracking-widest text-xs px-4 py-2 rounded-full">
+          Exclusive Inventory
+        </span>
+        <h2 class="text-4xl md:text-6xl font-black text-white mt-4">Featured <span class="rainbow-text">Luxury Properties</span></h2>
+        <p class="text-slate-300 text-sm mt-2 max-w-2xl">Handpicked residential villas, penthouses, and commercial properties with 100% clear legal titles.</p>
+      </div>
+      <button onclick="openModal('visitModal')" class="bg-gradient-to-r from-cyan-400 to-blue-600 text-slate-950 font-black text-xs uppercase tracking-wider px-6 py-4 rounded-xl shadow-lg transition">
+        Request Complete Brochure <i class="fa-solid fa-download ml-2"></i>
+      </button>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Property 1: Pink Theme -->
+      <div class="interactive-card bg-[#0c0c20] border-2 border-pink-500/40 rounded-3xl overflow-hidden shadow-2xl">
+        <div class="relative h-[340px]">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Luxury Villa" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c20] via-transparent to-black/30"></div>
+          <span class="absolute top-4 left-4 bg-pink-500 text-white text-xs font-black uppercase px-3.5 py-1.5 rounded-full shadow">
+            Ready To Move
+          </span>
+          <span class="absolute top-4 right-4 bg-slate-950/90 border border-pink-400 text-pink-300 text-sm font-black px-3.5 py-1.5 rounded-xl">
+            ₹ 2.85 Cr
+          </span>
+          <div class="absolute bottom-4 left-5 right-5">
+            <span class="text-amber-300 text-xs font-extrabold uppercase"><i class="fa-solid fa-crown mr-1"></i> Signature Gated Villa</span>
+            <h3 class="text-2xl font-black text-white">The Palm Royale Villa</h3>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="grid grid-cols-3 gap-2 py-3 mb-4 border-y border-white/10 text-xs font-bold text-slate-300 text-center">
+            <span><i class="fa-solid fa-bed text-pink-400 mr-1"></i> 4 BHK + Pool</span>
+            <span><i class="fa-solid fa-ruler-combined text-cyan-400 mr-1"></i> 3,650 Sq.Ft.</span>
+            <span><i class="fa-solid fa-compass text-amber-400 mr-1"></i> East Facing</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-emerald-400 font-bold"><i class="fa-solid fa-circle-check mr-1"></i> RERA Approved</span>
+            <button onclick="openModal('visitModal')" class="bg-pink-500 hover:bg-pink-600 text-white text-xs font-black px-4 py-2.5 rounded-xl transition">Book Visit →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property 2: Cyan Theme -->
+      <div class="interactive-card bg-[#0c0c20] border-2 border-cyan-500/40 rounded-3xl overflow-hidden shadow-2xl">
+        <div class="relative h-[340px]">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=85" alt="High Rise Apartment" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c20] via-transparent to-black/30"></div>
+          <span class="absolute top-4 left-4 bg-cyan-400 text-slate-950 text-xs font-black uppercase px-3.5 py-1.5 rounded-full shadow">
+            Luxury High-Rise
+          </span>
+          <span class="absolute top-4 right-4 bg-slate-950/90 border border-cyan-400 text-cyan-300 text-sm font-black px-3.5 py-1.5 rounded-xl">
+            ₹ 1.45 Cr
+          </span>
+          <div class="absolute bottom-4 left-5 right-5">
+            <span class="text-cyan-300 text-xs font-extrabold uppercase"><i class="fa-solid fa-building mr-1"></i> Sky-Deck Residences</span>
+            <h3 class="text-2xl font-black text-white">Celestia Heights 3BHK</h3>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="grid grid-cols-3 gap-2 py-3 mb-4 border-y border-white/10 text-xs font-bold text-slate-300 text-center">
+            <span><i class="fa-solid fa-bed text-cyan-400 mr-1"></i> 3 BHK Luxury</span>
+            <span><i class="fa-solid fa-ruler-combined text-pink-400 mr-1"></i> 2,150 Sq.Ft.</span>
+            <span><i class="fa-solid fa-car text-amber-400 mr-1"></i> 2 Covered Park</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-emerald-400 font-bold"><i class="fa-solid fa-circle-check mr-1"></i> OC Received</span>
+            <button onclick="openModal('visitModal')" class="bg-cyan-400 hover:bg-cyan-300 text-slate-950 text-xs font-black px-4 py-2.5 rounded-xl transition">Book Visit →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property 3: Amber Theme -->
+      <div class="interactive-card bg-[#0c0c20] border-2 border-amber-500/40 rounded-3xl overflow-hidden shadow-2xl">
+        <div class="relative h-[340px]">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85" alt="Commercial Tower" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c20] via-transparent to-black/30"></div>
+          <span class="absolute top-4 left-4 bg-amber-400 text-slate-950 text-xs font-black uppercase px-3.5 py-1.5 rounded-full shadow">
+            Assured 9% ROI
+          </span>
+          <span class="absolute top-4 right-4 bg-slate-950/90 border border-amber-400 text-amber-300 text-sm font-black px-3.5 py-1.5 rounded-xl">
+            ₹ 1.90 Cr
+          </span>
+          <div class="absolute bottom-4 left-5 right-5">
+            <span class="text-amber-300 text-xs font-extrabold uppercase"><i class="fa-solid fa-briefcase mr-1"></i> Grade-A Commercial</span>
+            <h3 class="text-2xl font-black text-white">Nexus Corporate Square</h3>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="grid grid-cols-3 gap-2 py-3 mb-4 border-y border-white/10 text-xs font-bold text-slate-300 text-center">
+            <span><i class="fa-solid fa-chair text-amber-400 mr-1"></i> Furnished Office</span>
+            <span><i class="fa-solid fa-ruler-combined text-cyan-400 mr-1"></i> 1,800 Sq.Ft.</span>
+            <span><i class="fa-solid fa-bolt text-pink-400 mr-1"></i> 100% Power Back</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-emerald-400 font-bold"><i class="fa-solid fa-circle-check mr-1"></i> Pre-Leased Option</span>
+            <button onclick="openModal('visitModal')" class="bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-black px-4 py-2.5 rounded-xl transition">Book Visit →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property 4: Purple Theme -->
+      <div class="interactive-card bg-[#0c0c20] border-2 border-purple-500/40 rounded-3xl overflow-hidden shadow-2xl">
+        <div class="relative h-[340px]">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=85" alt="Modern Bungalow" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c20] via-transparent to-black/30"></div>
+          <span class="absolute top-4 left-4 bg-purple-500 text-white text-xs font-black uppercase px-3.5 py-1.5 rounded-full shadow">
+            Gated Township
+          </span>
+          <span class="absolute top-4 right-4 bg-slate-950/90 border border-purple-400 text-purple-300 text-sm font-black px-3.5 py-1.5 rounded-xl">
+            ₹ 4.20 Cr
+          </span>
+          <div class="absolute bottom-4 left-5 right-5">
+            <span class="text-purple-300 text-xs font-extrabold uppercase"><i class="fa-solid fa-gem mr-1"></i> Ultra-Luxury Duplex</span>
+            <h3 class="text-2xl font-black text-white">Aura Golf-View Mansion</h3>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="grid grid-cols-3 gap-2 py-3 mb-4 border-y border-white/10 text-xs font-bold text-slate-300 text-center">
+            <span><i class="fa-solid fa-bed text-purple-400 mr-1"></i> 5 BHK Duplex</span>
+            <span><i class="fa-solid fa-ruler-combined text-cyan-400 mr-1"></i> 4,800 Sq.Ft.</span>
+            <span><i class="fa-solid fa-tree text-emerald-400 mr-1"></i> Private Lawn</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-emerald-400 font-bold"><i class="fa-solid fa-circle-check mr-1"></i> Freehold Registry</span>
+            <button onclick="openModal('visitModal')" class="bg-purple-500 hover:bg-purple-600 text-white text-xs font-black px-4 py-2.5 rounded-xl transition">Book Visit →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property 5: Emerald Theme -->
+      <div class="interactive-card bg-[#0c0c20] border-2 border-emerald-500/40 rounded-3xl overflow-hidden shadow-2xl">
+        <div class="relative h-[340px]">
+          <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=900&q=85" alt="Retail Showroom" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c20] via-transparent to-black/30"></div>
+          <span class="absolute top-4 left-4 bg-emerald-400 text-slate-950 text-xs font-black uppercase px-3.5 py-1.5 rounded-full shadow">
+            High-Street Retail
+          </span>
+          <span class="absolute top-4 right-4 bg-slate-950/90 border border-emerald-400 text-emerald-300 text-sm font-black px-3.5 py-1.5 rounded-xl">
+            ₹ 95 Lakhs
+          </span>
+          <div class="absolute bottom-4 left-5 right-5">
+            <span class="text-emerald-300 text-xs font-extrabold uppercase"><i class="fa-solid fa-shop mr-1"></i> Double-Height Shop</span>
+            <h3 class="text-2xl font-black text-white">Galleria Boulevard Retail</h3>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="grid grid-cols-3 gap-2 py-3 mb-4 border-y border-white/10 text-xs font-bold text-slate-300 text-center">
+            <span><i class="fa-solid fa-store text-emerald-400 mr-1"></i> Ground Floor</span>
+            <span><i class="fa-solid fa-ruler-combined text-cyan-400 mr-1"></i> 850 Sq.Ft.</span>
+            <span><i class="fa-solid fa-road text-amber-400 mr-1"></i> 60m Main Road</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-emerald-400 font-bold"><i class="fa-solid fa-circle-check mr-1"></i> Bank Loan Approved</span>
+            <button onclick="openModal('visitModal')" class="bg-emerald-400 hover:bg-emerald-300 text-slate-950 text-xs font-black px-4 py-2.5 rounded-xl transition">Book Visit →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property 6: Rose Theme -->
+      <div class="interactive-card bg-[#0c0c20] border-2 border-rose-500/40 rounded-3xl overflow-hidden shadow-2xl">
+        <div class="relative h-[340px]">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=85" alt="Luxury Interior" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c20] via-transparent to-black/30"></div>
+          <span class="absolute top-4 left-4 bg-rose-500 text-white text-xs font-black uppercase px-3.5 py-1.5 rounded-full shadow">
+            Fully Furnished
+          </span>
+          <span class="absolute top-4 right-4 bg-slate-950/90 border border-rose-400 text-rose-300 text-sm font-black px-3.5 py-1.5 rounded-xl">
+            ₹ 1.75 Cr
+          </span>
+          <div class="absolute bottom-4 left-5 right-5">
+            <span class="text-rose-300 text-xs font-extrabold uppercase"><i class="fa-solid fa-star mr-1"></i> Smart Home Residences</span>
+            <h3 class="text-2xl font-black text-white">Sovereign Smart 4BHK</h3>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="grid grid-cols-3 gap-2 py-3 mb-4 border-y border-white/10 text-xs font-bold text-slate-300 text-center">
+            <span><i class="fa-solid fa-bed text-rose-400 mr-1"></i> 4 BHK + Servant</span>
+            <span><i class="fa-solid fa-ruler-combined text-cyan-400 mr-1"></i> 2,680 Sq.Ft.</span>
+            <span><i class="fa-solid fa-water-ladder text-amber-400 mr-1"></i> Club & Pool</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-emerald-400 font-bold"><i class="fa-solid fa-circle-check mr-1"></i> Immediate Registry</span>
+            <button onclick="openModal('visitModal')" class="bg-rose-500 hover:bg-rose-600 text-white text-xs font-black px-4 py-2.5 rounded-xl transition">Book Visit →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. NEW LAUNCH & UNDER-CONSTRUCTION RERA PROJECTS -->
+  <section id="new-launches" class="py-28 bg-[#080818] border-y border-indigo-500/20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-black uppercase tracking-widest text-xs px-4 py-2 rounded-full">
+          Pre-Launch & Ongoing Developments
+        </span>
+        <h2 class="text-4xl md:text-6xl font-black text-white mt-4">New Launch <span class="rainbow-text">RERA Projects</span></h2>
+        <p class="text-slate-300 text-sm mt-2 max-w-2xl mx-auto">Invest early in our high-appreciation upcoming residential townships and commercial hubs.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+        <div class="interactive-card bg-[#0c0c20] border-2 border-pink-500/40 rounded-3xl overflow-hidden shadow-xl">
+          <div class="relative h-[360px]">
+            <img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&w=900&q=85" alt="Under Construction Tower" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c20] via-black/30 to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-gradient-to-r from-pink-500 to-rose-500 text-white text-xs font-black uppercase px-4 py-1.5 rounded-full">
+              <i class="fa-solid fa-fire mr-1"></i> Booking Open
+            </span>
+            <div class="absolute bottom-4 left-5 right-5">
+              <h3 class="text-2xl font-black text-white">Pinnacle World Towers</h3>
+              <p class="text-xs text-pink-200 mt-1">G+24 Luxury Residential Towers • Starting ₹ 88 Lakhs*</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between text-xs font-extrabold mb-2">
+              <span class="text-pink-300">RCC Structure & Tower Crane Stage</span>
+              <span class="text-amber-400">78% Completed</span>
+            </div>
+            <div class="w-full bg-slate-800 h-3.5 rounded-full overflow-hidden">
+              <div class="bg-gradient-to-r from-pink-500 via-purple-500 to-amber-400 h-full rounded-full" style="width: 78%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="interactive-card bg-[#0c0c20] border-2 border-cyan-500/40 rounded-3xl overflow-hidden shadow-xl">
+          <div class="relative h-[360px]">
+            <img src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?auto=format&fit=crop&w=900&q=85" alt="Commercial IT Park" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c20] via-black/30 to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 text-xs font-black uppercase px-4 py-1.5 rounded-full">
+              <i class="fa-solid fa-bolt mr-1"></i> Nearing Possession
+            </span>
+            <div class="absolute bottom-4 left-5 right-5">
+              <h3 class="text-2xl font-black text-white">CyberOne Commercial Plaza</h3>
+              <p class="text-xs text-cyan-200 mt-1">Lockable Office Spaces & Food Court • Starting ₹ 65 Lakhs*</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between text-xs font-extrabold mb-2">
+              <span class="text-cyan-300">Glass Facade & Interior Finishing</span>
+              <span class="text-emerald-400">91% Completed</span>
+            </div>
+            <div class="w-full bg-slate-800 h-3.5 rounded-full overflow-hidden">
+              <div class="bg-gradient-to-r from-cyan-400 via-blue-500 to-emerald-400 h-full rounded-full" style="width: 91%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="interactive-card bg-[#0c0c20] border-2 border-amber-500/40 rounded-3xl overflow-hidden shadow-xl">
+          <div class="relative h-[360px]">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85" alt="Plotted Township" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c20] via-black/30 to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 text-xs font-black uppercase px-4 py-1.5 rounded-full">
+              <i class="fa-solid fa-map-pin mr-1"></i> Freehold Plots
+            </span>
+            <div class="absolute bottom-4 left-5 right-5">
+              <h3 class="text-2xl font-black text-white">Emerald Green Plotted City</h3>
+              <p class="text-xs text-amber-200 mt-1">1000 to 4500 Sq.Ft. Gated Villa Plots • Starting ₹ 42 Lakhs*</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between text-xs font-extrabold mb-2">
+              <span class="text-amber-300">Wide Roads, Park & Underground Electrification</span>
+              <span class="text-pink-400">85% Completed</span>
+            </div>
+            <div class="w-full bg-slate-800 h-3.5 rounded-full overflow-hidden">
+              <div class="bg-gradient-to-r from-amber-400 via-orange-500 to-pink-500 h-full rounded-full" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. 8 COLORFUL REAL ESTATE SERVICES -->
+  <section id="services" class="py-28 px-6 max-w-7xl mx-auto">
+    <div class="text-center mb-20">
+      <span class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-extrabold uppercase tracking-widest text-xs px-4 py-2 rounded-full">
+        End-To-End Property Solutions
+      </span>
+      <h2 class="text-4xl md:text-6xl font-black text-white mt-4">360° Real Estate <span class="rainbow-text">Advisory Services</span></h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="interactive-card bg-gradient-to-b from-pink-500/15 to-[#0b0b1e] border-2 border-pink-500/40 p-8 rounded-3xl">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg">
+          <i class="fa-solid fa-house-chimney"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Residential Buying & Selling</h3>
+        <p class="text-slate-300 text-xs leading-relaxed">Verified luxury apartments, builder floors, penthouses, and independent villas across prime residential sectors.</p>
+      </div>
+
+      <div class="interactive-card bg-gradient-to-b from-cyan-500/15 to-[#0b0b1e] border-2 border-cyan-500/40 p-8 rounded-3xl">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg">
+          <i class="fa-solid fa-building"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Commercial Office & Retail</h3>
+        <p class="text-slate-300 text-xs leading-relaxed">Pre-leased corporate offices, high-street retail showrooms, food courts, and institutional commercial buildings.</p>
+      </div>
+
+      <div class="interactive-card bg-gradient-to-b from-purple-500/15 to-[#0b0b1e] border-2 border-purple-500/40 p-8 rounded-3xl">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg">
+          <i class="fa-solid fa-map-location-dot"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Plots & Land Acquisition</h3>
+        <p class="text-slate-300 text-xs leading-relaxed">CLU-cleared residential plots, industrial land parcels, warehouse zones, and agricultural farmhouses.</p>
+      </div>
+
+      <div class="interactive-card bg-gradient-to-b from-amber-500/15 to-[#0b0b1e] border-2 border-amber-500/40 p-8 rounded-3xl">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-600 text-slate-950 flex items-center justify-center text-2xl mb-6 shadow-lg">
+          <i class="fa-solid fa-building-columns"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Home Loan & Mortgage Desk</h3>
+        <p class="text-slate-300 text-xs leading-relaxed">Instant home loan sanction from SBI, HDFC, ICICI & Axis Bank at lowest interest rates with doorstep documentation.</p>
+      </div>
+
+      <div class="interactive-card bg-gradient-to-b from-emerald-500/15 to-[#0b0b1e] border-2 border-emerald-500/40 p-8 rounded-3xl">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 text-slate-950 flex items-center justify-center text-2xl mb-6 shadow-lg">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Legal Title & Registry Audit</h3>
+        <p class="text-slate-300 text-xs leading-relaxed">30-year chain document verification, RERA compliance check, stamp duty calculation, and sub-registrar sale deed execution.</p>
+      </div>
+
+      <div class="interactive-card bg-gradient-to-b from-fuchsia-500/15 to-[#0b0b1e] border-2 border-fuchsia-500/40 p-8 rounded-3xl">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-fuchsia-500 to-pink-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg">
+          <i class="fa-solid fa-earth-americas"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">NRI Property Management</h3>
+        <p class="text-slate-300 text-xs leading-relaxed">Dedicated portfolio management, tenant verification, rent collection, and virtual video site tours for NRI investors.</p>
+      </div>
+
+      <div class="interactive-card bg-gradient-to-b from-sky-500/15 to-[#0b0b1e] border-2 border-sky-500/40 p-8 rounded-3xl">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-400 to-indigo-500 text-white flex items-center justify-center text-2xl mb-6 shadow-lg">
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Luxury Interior & Turnkey</h3>
+        <p class="text-slate-300 text-xs leading-relaxed">Complete modular kitchens, false ceiling, smart home automation, and luxury furnishing before you move in.</p>
+      </div>
+
+      <div class="interactive-card bg-gradient-to-b from-lime-500/15 to-[#0b0b1e] border-2 border-lime-500/40 p-8 rounded-3xl">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-lime-400 to-emerald-600 text-slate-950 flex items-center justify-center text-2xl mb-6 shadow-lg">
+          <i class="fa-solid fa-chart-pie"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">High-ROI Investment Advisory</h3>
+        <p class="text-slate-300 text-xs leading-relaxed">Data-backed real estate wealth planning focused on capital appreciation and assured corporate lease returns.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. ABOUT REAL ESTATE AGENCY SECTION -->
+  <section id="about" class="py-24 bg-[#080818] border-y border-pink-500/20 px-6">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-14 items-center">
       <div class="lg:col-span-6 grid sm:grid-cols-2 gap-6">
         <div class="interactive-card h-[440px] rounded-3xl overflow-hidden border-2 border-pink-500/50 shadow-2xl">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80" alt="Engineering Team" class="w-full h-full object-cover">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Luxury Villa Interior" class="w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6">
-            <span class="bg-pink-500 text-white text-xs font-black px-3 py-1 rounded-full w-max mb-2">Creative & Code</span>
-            <h4 class="text-xl font-bold text-white">Senior Full-Stack & UI/UX Squad</h4>
+            <span class="bg-pink-500 text-white text-xs font-black px-3 py-1 rounded-full w-max mb-2">100% Verified</span>
+            <h4 class="text-xl font-bold text-white">Premium Residential & Villa Portfolio</h4>
           </div>
         </div>
         <div class="interactive-card h-[440px] rounded-3xl overflow-hidden border-2 border-cyan-500/50 shadow-2xl sm:mt-10">
-          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="Cloud Servers" class="w-full h-full object-cover">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=85" alt="Property Key Handover" class="w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6">
-            <span class="bg-cyan-400 text-slate-950 text-xs font-black px-3 py-1 rounded-full w-max mb-2">Cloud Infrastructure</span>
-            <h4 class="text-xl font-bold text-white">High-Speed Server & AI Clusters</h4>
+            <span class="bg-cyan-400 text-slate-950 text-xs font-black px-3 py-1 rounded-full w-max mb-2">Transparent Deals</span>
+            <h4 class="text-xl font-bold text-white">Direct Builder Price & Instant Registry</h4>
           </div>
         </div>
       </div>
@@ -404,27 +815,18 @@ HTML_TEMPLATE = """<!DOCTYPE html>
           About {{BUSINESS_NAME}}
         </span>
         <h2 class="text-3xl sm:text-5xl font-black text-white mt-5 mb-6 leading-tight">
-          Where Colorful Creativity Meets <span class="rainbow-text">Enterprise Engineering</span>
+          Setting The Gold Standard In <span class="rainbow-text">Real Estate Excellence</span>
         </h2>
         <p class="text-slate-300 text-base leading-relaxed mb-6">
-          <strong>{{BUSINESS_NAME}}</strong> is a full-service digital transformation and software engineering powerhouse operating from <strong>{{ADDRESS}}</strong>. We help ambitious businesses scale through custom cloud software, mobile apps, and automated marketing funnels.
+          <strong>{{BUSINESS_NAME}}</strong> is a premier real estate consultancy, property development, and asset management company headquartered at <strong>{{ADDRESS}}</strong>. We connect homebuyers, corporate tenants, and institutional investors with RERA-verified properties.
         </p>
-        <div class="grid sm:grid-cols-2 gap-4 mb-8">
-          <div class="bg-gradient-to-r from-pink-500/10 to-purple-500/10 p-5 rounded-2xl border border-pink-500/30">
-            <i class="fa-solid fa-wand-magic-sparkles text-pink-400 text-xl mb-2"></i>
-            <h4 class="font-bold text-white text-sm">Ultra-Modern UI/UX</h4>
-            <p class="text-xs text-slate-300 mt-1">Interactive, colorful, and butter-smooth interfaces that convert visitors.</p>
-          </div>
-          <div class="bg-gradient-to-r from-cyan-500/10 to-emerald-500/10 p-5 rounded-2xl border border-cyan-500/30">
-            <i class="fa-solid fa-server text-cyan-400 text-xl mb-2"></i>
-            <h4 class="font-bold text-white text-sm">99.99% Cloud Reliability</h4>
-            <p class="text-xs text-slate-300 mt-1">Auto-scaling AWS & cloud clusters with 24/7 security monitoring.</p>
-          </div>
-        </div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-8">
+          Every property listed with us passes a strict 40-point legal and structural inspection covering title deed history, municipal approvals, occupancy certificates, and builder track record.
+        </p>
 
         <div class="p-5 rounded-2xl bg-white/5 border border-white/10 flex flex-wrap justify-between items-center gap-4">
           <div>
-            <span class="text-xs text-amber-400 uppercase font-bold block">Direct Helpline</span>
+            <span class="text-xs text-amber-400 uppercase font-bold block">Property Helpline</span>
             <a href="tel:{{PHONE}}" class="text-lg font-black text-white hover:text-pink-400">{{PHONE}}</a>
           </div>
           <div>
@@ -436,317 +838,91 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- 7. 8 COLORFUL DIGITAL SERVICES (EACH CARD HAS ITS OWN NEON THEME) -->
-  <section id="services" class="py-28 bg-[#080818] border-y border-indigo-500/20 px-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-20">
-        <span class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-extrabold uppercase tracking-widest text-xs px-4 py-2 rounded-full">
-          Our Services Spectrum
-        </span>
-        <h2 class="text-4xl md:text-6xl font-black text-white mt-4">Full-Spectrum <span class="rainbow-text">Digital Solutions</span></h2>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Card 1: Pink -->
-        <div class="interactive-card bg-gradient-to-b from-pink-500/15 to-[#0b0b1e] border-2 border-pink-500/40 p-8 rounded-3xl">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-pink-500/30">
-            <i class="fa-solid fa-code"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">Custom Web Portals</h3>
-          <p class="text-slate-300 text-xs leading-relaxed">High-speed React, Next.js, and Node.js web platforms with interactive animations and SEO architecture.</p>
-        </div>
-
-        <!-- Card 2: Cyan -->
-        <div class="interactive-card bg-gradient-to-b from-cyan-500/15 to-[#0b0b1e] border-2 border-cyan-500/40 p-8 rounded-3xl">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-cyan-500/30">
-            <i class="fa-solid fa-mobile-screen-button"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">iOS & Android Apps</h3>
-          <p class="text-slate-300 text-xs leading-relaxed">Sleek Flutter & React Native mobile applications with instant push notifications and payment gateways.</p>
-        </div>
-
-        <!-- Card 3: Purple -->
-        <div class="interactive-card bg-gradient-to-b from-purple-500/15 to-[#0b0b1e] border-2 border-purple-500/40 p-8 rounded-3xl">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-purple-500/30">
-            <i class="fa-solid fa-robot"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">AI & Chat Automation</h3>
-          <p class="text-slate-300 text-xs leading-relaxed">Custom AI agents, official WhatsApp Business API bots, and automated CRM lead qualification.</p>
-        </div>
-
-        <!-- Card 4: Amber -->
-        <div class="interactive-card bg-gradient-to-b from-amber-500/15 to-[#0b0b1e] border-2 border-amber-500/40 p-8 rounded-3xl">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-600 text-slate-950 flex items-center justify-center text-2xl mb-6 shadow-lg shadow-amber-500/30">
-            <i class="fa-solid fa-bullhorn"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">Digital Marketing & Ads</h3>
-          <p class="text-slate-300 text-xs leading-relaxed">High-converting Meta Ads, Google Search/Display campaigns, and viral social media growth strategies.</p>
-        </div>
-
-        <!-- Card 5: Emerald -->
-        <div class="interactive-card bg-gradient-to-b from-emerald-500/15 to-[#0b0b1e] border-2 border-emerald-500/40 p-8 rounded-3xl">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 text-slate-950 flex items-center justify-center text-2xl mb-6 shadow-lg shadow-emerald-500/30">
-            <i class="fa-solid fa-cloud-arrow-up"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">Cloud & DevOps Infra</h3>
-          <p class="text-slate-300 text-xs leading-relaxed">AWS, Google Cloud, and Azure cluster management, Docker CI/CD pipelines, and 24/7 server scaling.</p>
-        </div>
-
-        <!-- Card 6: Rose/Fuchsia -->
-        <div class="interactive-card bg-gradient-to-b from-fuchsia-500/15 to-[#0b0b1e] border-2 border-fuchsia-500/40 p-8 rounded-3xl">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-fuchsia-500 to-pink-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-fuchsia-500/30">
-            <i class="fa-solid fa-network-wired"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">Enterprise ERP & Billing</h3>
-          <p class="text-slate-300 text-xs leading-relaxed">Custom inventory, GST invoicing, payroll, and multi-branch supply chain management software.</p>
-        </div>
-
-        <!-- Card 7: Sky Blue -->
-        <div class="interactive-card bg-gradient-to-b from-sky-500/15 to-[#0b0b1e] border-2 border-sky-500/40 p-8 rounded-3xl">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-400 to-indigo-500 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-sky-500/30">
-            <i class="fa-solid fa-palette"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">UI/UX & Brand Design</h3>
-          <p class="text-slate-300 text-xs leading-relaxed">Vibrant Figma design systems, 3D web graphics, brand identity kits, and video motion graphics.</p>
-        </div>
-
-        <!-- Card 8: Lime/Green -->
-        <div class="interactive-card bg-gradient-to-b from-lime-500/15 to-[#0b0b1e] border-2 border-lime-500/40 p-8 rounded-3xl">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-lime-400 to-emerald-600 text-slate-950 flex items-center justify-center text-2xl mb-6 shadow-lg shadow-lime-500/30">
-            <i class="fa-solid fa-shield-halved"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">Cybersecurity & SSL</h3>
-          <p class="text-slate-300 text-xs leading-relaxed">Enterprise DDoS protection, penetration testing, zero-trust firewalls, and data compliance audits.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. ONGOING LIVE PROJECTS (COLORFUL PROGRESS CARDS) -->
-  <section id="ongoing" class="py-28 px-6 max-w-7xl mx-auto">
-    <div class="text-center mb-16">
-      <span class="bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-black uppercase tracking-widest text-xs px-4 py-2 rounded-full">
-        Active R&D & Staging
-      </span>
-      <h2 class="text-4xl md:text-6xl font-black text-white mt-4">Ongoing <span class="rainbow-text">Live Deployments</span></h2>
-    </div>
-
-    <div class="grid lg:grid-cols-3 gap-8">
-      <div class="interactive-card bg-[#0c0c20] border-2 border-pink-500/40 rounded-3xl overflow-hidden shadow-xl">
-        <div class="relative h-[380px]">
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80" alt="FinTech API" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c20] via-black/30 to-transparent"></div>
-          <span class="absolute top-4 left-4 bg-gradient-to-r from-pink-500 to-rose-500 text-white text-xs font-black uppercase px-4 py-1.5 rounded-full">
-            <i class="fa-solid fa-spinner fa-spin mr-1"></i> Sprint Active
-          </span>
-          <div class="absolute bottom-4 left-5 right-5">
-            <h3 class="text-2xl font-black text-white">OmniPay FinTech Core Switch</h3>
-            <p class="text-xs text-pink-200 mt-1">High-frequency UPI/Card payment gateway & instant settlement dashboard.</p>
-          </div>
-        </div>
-        <div class="p-6">
-          <div class="flex justify-between text-xs font-extrabold mb-2">
-            <span class="text-pink-300">Load Testing & UAT</span>
-            <span class="text-amber-400">84% Done</span>
-          </div>
-          <div class="w-full bg-slate-800 h-3.5 rounded-full overflow-hidden">
-            <div class="bg-gradient-to-r from-pink-500 via-purple-500 to-amber-400 h-full rounded-full" style="width: 84%"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="interactive-card bg-[#0c0c20] border-2 border-cyan-500/40 rounded-3xl overflow-hidden shadow-xl">
-        <div class="relative h-[380px]">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="AI ERP" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c20] via-black/30 to-transparent"></div>
-          <span class="absolute top-4 left-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 text-xs font-black uppercase px-4 py-1.5 rounded-full">
-            <i class="fa-solid fa-spinner fa-spin mr-1"></i> Cloud Sync
-          </span>
-          <div class="absolute bottom-4 left-5 right-5">
-            <h3 class="text-2xl font-black text-white">Nexus AI Supply-Chain ERP</h3>
-            <p class="text-xs text-cyan-200 mt-1">Automated multi-warehouse inventory & predictive dispatch engine.</p>
-          </div>
-        </div>
-        <div class="p-6">
-          <div class="flex justify-between text-xs font-extrabold mb-2">
-            <span class="text-cyan-300">API Cluster Deployment</span>
-            <span class="text-emerald-400">76% Done</span>
-          </div>
-          <div class="w-full bg-slate-800 h-3.5 rounded-full overflow-hidden">
-            <div class="bg-gradient-to-r from-cyan-400 via-blue-500 to-emerald-400 h-full rounded-full" style="width: 76%"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="interactive-card bg-[#0c0c20] border-2 border-amber-500/40 rounded-3xl overflow-hidden shadow-xl">
-        <div class="relative h-[380px]">
-          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=900&q=80" alt="Security Cloud" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c20] via-black/30 to-transparent"></div>
-          <span class="absolute top-4 left-4 bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 text-xs font-black uppercase px-4 py-1.5 rounded-full">
-            <i class="fa-solid fa-spinner fa-spin mr-1"></i> Beta Rollout
-          </span>
-          <div class="absolute bottom-4 left-5 right-5">
-            <h3 class="text-2xl font-black text-white">Cortex Omnichannel AI CRM</h3>
-            <p class="text-xs text-amber-200 mt-1">Voice bot, WhatsApp automation & real-time sales analytics cloud.</p>
-          </div>
-        </div>
-        <div class="p-6">
-          <div class="flex justify-between text-xs font-extrabold mb-2">
-            <span class="text-amber-300">Production Server Ready</span>
-            <span class="text-pink-400">91% Done</span>
-          </div>
-          <div class="w-full bg-slate-800 h-3.5 rounded-full overflow-hidden">
-            <div class="bg-gradient-to-r from-amber-400 via-orange-500 to-pink-500 h-full rounded-full" style="width: 91%"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 9. COMPLETED PLATFORMS PORTFOLIO -->
-  <section id="portfolio" class="py-28 bg-[#080818] border-y border-purple-500/20 px-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <span class="bg-gradient-to-r from-emerald-400 to-teal-500 text-slate-950 font-black uppercase tracking-widest text-xs px-4 py-2 rounded-full">
-          100% Delivered Portfolio
-        </span>
-        <h2 class="text-4xl md:text-6xl font-black text-white mt-4">Completed <span class="rainbow-text">Flagship Platforms</span></h2>
-      </div>
-
-      <div class="grid lg:grid-cols-3 gap-8">
-        <div class="interactive-card bg-[#0c0c20] border-2 border-emerald-500/40 rounded-3xl overflow-hidden">
-          <div class="relative h-[420px]">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="B2B Cloud" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c20] via-black/30 to-transparent"></div>
-            <span class="absolute top-4 left-4 bg-emerald-400 text-slate-950 text-xs font-black uppercase px-4 py-1.5 rounded-full">
-              <i class="fa-solid fa-circle-check mr-1"></i> Live In Production
-            </span>
-            <div class="absolute bottom-5 left-5 right-5">
-              <span class="text-emerald-400 text-xs font-extrabold uppercase">E-Commerce & ERP</span>
-              <h3 class="text-2xl font-black text-white mt-1">PrimeTrade B2B Wholesale Cloud</h3>
-              <p class="text-xs text-slate-300 mt-1">2.5L+ daily transactions with automated GST billing & dealer app.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="interactive-card bg-[#0c0c20] border-2 border-purple-500/40 rounded-3xl overflow-hidden">
-          <div class="relative h-[420px]">
-            <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=900&q=80" alt="Hospital Cloud" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c20] via-black/30 to-transparent"></div>
-            <span class="absolute top-4 left-4 bg-emerald-400 text-slate-950 text-xs font-black uppercase px-4 py-1.5 rounded-full">
-              <i class="fa-solid fa-circle-check mr-1"></i> Live In Production
-            </span>
-            <div class="absolute bottom-5 left-5 right-5">
-              <span class="text-purple-400 text-xs font-extrabold uppercase">HealthTech SaaS</span>
-              <h3 class="text-2xl font-black text-white mt-1">MedCore Hospital ERP Suite</h3>
-              <p class="text-xs text-slate-300 mt-1">Running across 200+ hospitals with cloud lab & pharmacy modules.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="interactive-card bg-[#0c0c20] border-2 border-cyan-500/40 rounded-3xl overflow-hidden">
-          <div class="relative h-[420px]">
-            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=900&q=80" alt="Security Gateway" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c20] via-black/30 to-transparent"></div>
-            <span class="absolute top-4 left-4 bg-emerald-400 text-slate-950 text-xs font-black uppercase px-4 py-1.5 rounded-full">
-              <i class="fa-solid fa-circle-check mr-1"></i> Live In Production
-            </span>
-            <div class="absolute bottom-5 left-5 right-5">
-              <span class="text-cyan-400 text-xs font-extrabold uppercase">FinTech Security</span>
-              <h3 class="text-2xl font-black text-white mt-1">VaultX Biometric eKYC Engine</h3>
-              <p class="text-xs text-slate-300 mt-1">AI document verification & fraud detection gateway with 99.99% SLA.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 10. 6-STAGE COLORFUL WORKFLOW -->
+  <!-- 10. 6-STEP PROPERTY BUYING & REGISTRY WORKFLOW -->
   <section id="process" class="py-28 px-6 max-w-7xl mx-auto">
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-black text-white">6-Step <span class="rainbow-text">Execution Roadmap</span></h2>
+      <h2 class="text-4xl md:text-5xl font-black text-white">6-Step <span class="rainbow-text">Property Buying Journey</span></h2>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-6 gap-6">
       <div class="interactive-card bg-pink-500/10 border border-pink-500/40 p-6 rounded-2xl">
         <div class="text-3xl font-black text-pink-400 mb-2">01</div>
-        <h4 class="font-bold text-white text-sm mb-1">Strategy & SRS</h4>
-        <p class="text-xs text-slate-300">Complete project blueprint & architecture planning.</p>
+        <h4 class="font-bold text-white text-sm mb-1">Requirement Call</h4>
+        <p class="text-xs text-slate-300">Share your budget, preferred location, and BHK/office size.</p>
       </div>
       <div class="interactive-card bg-purple-500/10 border border-purple-500/40 p-6 rounded-2xl">
         <div class="text-3xl font-black text-purple-400 mb-2">02</div>
-        <h4 class="font-bold text-white text-sm mb-1">UI/UX Prototype</h4>
-        <p class="text-xs text-slate-300">Colorful Figma design & interactive wireframes.</p>
+        <h4 class="font-bold text-white text-sm mb-1">VIP Site Visits</h4>
+        <p class="text-xs text-slate-300">Chauffeur-driven guided visits to shortlisted RERA projects.</p>
       </div>
       <div class="interactive-card bg-cyan-500/10 border border-cyan-500/40 p-6 rounded-2xl">
         <div class="text-3xl font-black text-cyan-400 mb-2">03</div>
-        <h4 class="font-bold text-white text-sm mb-1">Agile Coding</h4>
-        <p class="text-xs text-slate-300">Clean frontend, backend API & database sprints.</p>
+        <h4 class="font-bold text-white text-sm mb-1">Best Price Deal</h4>
+        <p class="text-xs text-slate-300">Direct table negotiation for lowest builder/owner rate.</p>
       </div>
       <div class="interactive-card bg-amber-500/10 border border-amber-500/40 p-6 rounded-2xl">
         <div class="text-3xl font-black text-amber-400 mb-2">04</div>
-        <h4 class="font-bold text-white text-sm mb-1">QA & Speed Test</h4>
-        <p class="text-xs text-slate-300">120FPS performance optimization & security audit.</p>
+        <h4 class="font-bold text-white text-sm mb-1">Legal Verification</h4>
+        <p class="text-xs text-slate-300">Complete title deed, RERA & encumbrance certificate check.</p>
       </div>
       <div class="interactive-card bg-emerald-500/10 border border-emerald-500/40 p-6 rounded-2xl">
         <div class="text-3xl font-black text-emerald-400 mb-2">05</div>
-        <h4 class="font-bold text-white text-sm mb-1">Cloud Launch</h4>
-        <p class="text-xs text-slate-300">Zero-downtime deployment on global cloud servers.</p>
+        <h4 class="font-bold text-white text-sm mb-1">Home Loan Sanction</h4>
+        <p class="text-xs text-slate-300">Fast-track bank loan processing within 5 working days.</p>
       </div>
       <div class="interactive-card bg-rose-500/10 border border-rose-500/40 p-6 rounded-2xl">
         <div class="text-3xl font-black text-rose-400 mb-2">06</div>
-        <h4 class="font-bold text-white text-sm mb-1">24/7 Growth</h4>
-        <p class="text-xs text-slate-300">Dedicated SLA support, scaling & live monitoring.</p>
+        <h4 class="font-bold text-white text-sm mb-1">Registry & Keys</h4>
+        <p class="text-xs text-slate-300">Sale deed registration and ceremonial key handover.</p>
       </div>
     </div>
   </section>
 
-  <!-- 11. OUR ENGINEERS & WORKFORCE -->
-  <section id="team" class="py-28 bg-[#080818] border-y border-pink-500/20 px-6">
+  <!-- 11. SENIOR PROPERTY CONSULTANTS & LEGAL ADVISORS -->
+  <section id="advisors" class="py-28 bg-[#080818] border-y border-purple-500/20 px-6">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-black text-white">Our <span class="rainbow-text">Engineers & Digital Force</span></h2>
+        <h2 class="text-4xl md:text-5xl font-black text-white">Our <span class="rainbow-text">Property Advisors & Legal Desk</span></h2>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div class="interactive-card bg-[#0c0c20] border-2 border-pink-500/40 rounded-3xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Developers" class="w-full h-80 object-cover">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Luxury Property Head" class="w-full h-80 object-cover">
           <div class="p-6">
-            <span class="text-pink-400 text-xs font-extrabold uppercase">Full-Stack Squad</span>
-            <h4 class="text-xl font-bold text-white mt-1">Web & Mobile App Engineers</h4>
+            <span class="text-pink-400 text-xs font-extrabold uppercase">Residential Desk</span>
+            <h4 class="text-xl font-bold text-white mt-1">Luxury Villa & Penthouse Team</h4>
           </div>
         </div>
         <div class="interactive-card bg-[#0c0c20] border-2 border-cyan-500/40 rounded-3xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80" alt="AI Team" class="w-full h-80 object-cover">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Commercial Leasing" class="w-full h-80 object-cover">
           <div class="p-6">
-            <span class="text-cyan-400 text-xs font-extrabold uppercase">Cloud & AI Lab</span>
-            <h4 class="text-xl font-bold text-white mt-1">DevOps & AI Architects</h4>
+            <span class="text-cyan-400 text-xs font-extrabold uppercase">Commercial & Retail</span>
+            <h4 class="text-xl font-bold text-white mt-1">Corporate Leasing Specialists</h4>
           </div>
         </div>
         <div class="interactive-card bg-[#0c0c20] border-2 border-amber-500/40 rounded-3xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Server Crew" class="w-full h-80 object-cover">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80" alt="Legal Advocates" class="w-full h-80 object-cover">
           <div class="p-6">
-            <span class="text-amber-400 text-xs font-extrabold uppercase">24/7 Server NOC</span>
-            <h4 class="text-xl font-bold text-white mt-1">Infrastructure & Security</h4>
+            <span class="text-amber-400 text-xs font-extrabold uppercase">RERA & Registry</span>
+            <h4 class="text-xl font-bold text-white mt-1">Property Legal & Documentation</h4>
           </div>
         </div>
         <div class="interactive-card bg-[#0c0c20] border-2 border-emerald-500/40 rounded-3xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Growth Team" class="w-full h-80 object-cover">
+          <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&q=80" alt="Home Loan Desk" class="w-full h-80 object-cover">
           <div class="p-6">
-            <span class="text-emerald-400 text-xs font-extrabold uppercase">UI/UX & Growth</span>
-            <h4 class="text-xl font-bold text-white mt-1">Product & Digital Strategists</h4>
+            <span class="text-emerald-400 text-xs font-extrabold uppercase">Banking & Finance</span>
+            <h4 class="text-xl font-bold text-white mt-1">Home Loan & NRI Portfolio Desk</h4>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 12. VERIFIED LEGAL ENTITY DISCLOSURE TABLE (RAINBOW BORDER) -->
+  <!-- 12. VERIFIED LEGAL ENTITY DISCLOSURE TABLE (RAINBOW BORDER FOR META VERIFICATION) -->
   <section id="verification" class="py-24 px-6 max-w-5xl mx-auto">
     <div class="p-[3px] rounded-3xl rainbow-border shadow-2xl">
       <div class="bg-[#090919] rounded-3xl p-8 sm:p-12">
         <div class="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-white/10">
           <div>
-            <span class="text-xs font-extrabold uppercase tracking-widest text-pink-400">Statutory Corporate Disclosure</span>
+            <span class="text-xs font-extrabold uppercase tracking-widest text-pink-400">Statutory Real Estate Disclosure</span>
             <h3 class="text-2xl sm:text-3xl font-black text-white mt-1">Verified Legal Entity Information</h3>
           </div>
           <span class="bg-emerald-500/20 border border-emerald-400 text-emerald-300 text-xs font-extrabold px-4 py-2 rounded-full flex items-center">
@@ -761,7 +937,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
           </div>
           <div class="p-5 bg-white/5 rounded-2xl border border-cyan-500/30">
             <span class="text-xs font-bold uppercase text-cyan-400 block mb-1">Business Category</span>
-            <span class="text-lg font-black text-white">Digital Services, Software & IT Solutions</span>
+            <span class="text-lg font-black text-white">Real Estate Advisory, Property Development & Housing</span>
           </div>
           <div class="p-5 bg-white/5 rounded-2xl border border-amber-500/30">
             <span class="text-xs font-bold uppercase text-amber-400 block mb-1">Registered Telephone Number</span>
@@ -787,16 +963,16 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       <div class="lg:col-span-5">
         <div class="flex items-center space-x-3 mb-6">
           <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-pink-500 via-purple-500 to-cyan-400 flex items-center justify-center text-white text-xl font-black">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <i class="fa-solid fa-building-wheat"></i>
           </div>
           <span class="text-2xl font-black tracking-tight text-white">{{BUSINESS_NAME}}</span>
         </div>
         <p class="text-slate-300 text-sm leading-relaxed mb-8">
-          Next-generation digital transformation, custom enterprise software, cloud infrastructure, and AI automation solutions engineered for speed and scale.
+          Trusted real estate advisory, RERA-registered residential & commercial property consultancy, and turnkey asset management company.
         </p>
         <div class="flex flex-wrap gap-4">
-          <button onclick="openModal('loginModal')" class="bg-white/10 hover:bg-white/20 text-white text-xs font-extrabold px-6 py-3 rounded-xl transition">Client Login</button>
-          <button onclick="openModal('signupModal')" class="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 text-white text-xs font-black px-6 py-3 rounded-xl transition">Create Account</button>
+          <button onclick="openModal('loginModal')" class="bg-white/10 hover:bg-white/20 text-white text-xs font-extrabold px-6 py-3 rounded-xl transition">Buyer Login</button>
+          <button onclick="openModal('visitModal')" class="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 text-white text-xs font-black px-6 py-3 rounded-xl transition">Book Site Visit</button>
         </div>
       </div>
 
@@ -815,7 +991,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
           </div>
           <h4 class="text-xs font-extrabold uppercase tracking-wider text-cyan-400 mb-2">Phone Number</h4>
           <a href="tel:{{PHONE}}" class="text-base font-black text-white hover:text-cyan-300 block">{{PHONE}}</a>
-          <span class="text-[11px] text-slate-400 mt-1 block">Mon-Sat (9 AM - 8 PM)</span>
+          <span class="text-[11px] text-slate-400 mt-1 block">Mon-Sun (9 AM - 8 PM)</span>
         </div>
 
         <div class="interactive-card bg-gradient-to-b from-amber-500/10 to-[#0b0b1e] p-6 rounded-2xl border border-amber-500/40">
@@ -824,7 +1000,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
           </div>
           <h4 class="text-xs font-extrabold uppercase tracking-wider text-amber-400 mb-2">Official Email</h4>
           <a href="mailto:{{EMAIL}}" class="text-sm font-black text-white hover:text-amber-300 break-all block">{{EMAIL}}</a>
-          <span class="text-[11px] text-slate-400 mt-1 block">24/7 Official Desk</span>
+          <span class="text-[11px] text-slate-400 mt-1 block">24/7 Property Desk</span>
         </div>
       </div>
     </div>
@@ -838,12 +1014,33 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     </div>
   </footer>
 
+  <!-- SITE VISIT MODAL -->
+  <div id="visitModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+    <div class="bg-[#0d0d24] border-2 border-amber-400/50 text-white w-full max-w-md p-8 rounded-3xl shadow-2xl relative">
+      <button onclick="closeModal('visitModal')" class="absolute top-5 right-5 text-slate-400 hover:text-white text-xl"><i class="fa-solid fa-xmark"></i></button>
+      <h3 class="text-2xl font-black mb-1 rainbow-text">Schedule VIP Site Visit</h3>
+      <p class="text-xs text-slate-300 mb-6">Get free pickup & drop with a senior property advisor from {{BUSINESS_NAME}}</p>
+
+      <form onsubmit="event.preventDefault(); alert('Your Site Visit is confirmed! Our advisor from {{BUSINESS_NAME}} will call you shortly.'); closeModal('visitModal');" class="space-y-4 text-sm">
+        <input type="text" required placeholder="Your Full Name" class="w-full bg-black/50 border border-purple-500/40 rounded-xl px-4 py-3 text-white">
+        <input type="tel" required placeholder="Mobile Number (+91)" class="w-full bg-black/50 border border-purple-500/40 rounded-xl px-4 py-3 text-white">
+        <select class="w-full bg-black/50 border border-purple-500/40 rounded-xl px-4 py-3 text-white">
+          <option>Luxury 3/4/5 BHK Apartment</option>
+          <option>Independent Villa / Bungalow</option>
+          <option>Commercial Office / Retail Shop</option>
+          <option>Residential / Industrial Plot</option>
+        </select>
+        <button type="submit" class="w-full bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 text-white font-black py-3.5 rounded-xl shadow-lg">Confirm Site Visit</button>
+      </form>
+    </div>
+  </div>
+
   <!-- LOGIN MODAL -->
   <div id="loginModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden items-center justify-center p-4">
     <div class="bg-[#0d0d24] border-2 border-pink-500/50 text-white w-full max-w-md p-8 rounded-3xl shadow-2xl relative">
       <button onclick="closeModal('loginModal')" class="absolute top-5 right-5 text-slate-400 hover:text-white text-xl"><i class="fa-solid fa-xmark"></i></button>
-      <h3 class="text-2xl font-black mb-1 rainbow-text">Client Portal Login</h3>
-      <p class="text-xs text-slate-400 mb-6">Sign in to manage projects at {{BUSINESS_NAME}}</p>
+      <h3 class="text-2xl font-black mb-1 rainbow-text">Buyer & Investor Login</h3>
+      <p class="text-xs text-slate-400 mb-6">Access saved properties & allotment documents at {{BUSINESS_NAME}}</p>
 
       <button onclick="alert('Redirecting to Google SSO...');" class="w-full bg-white hover:bg-gray-100 text-slate-900 font-bold py-3.5 px-4 rounded-xl flex items-center justify-center space-x-3 mb-5 shadow">
         <svg class="w-5 h-5" viewBox="0 0 24 24">
@@ -867,8 +1064,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <div id="signupModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden items-center justify-center p-4">
     <div class="bg-[#0d0d24] border-2 border-cyan-500/50 text-white w-full max-w-md p-8 rounded-3xl shadow-2xl relative">
       <button onclick="closeModal('signupModal')" class="absolute top-5 right-5 text-slate-400 hover:text-white text-xl"><i class="fa-solid fa-xmark"></i></button>
-      <h3 class="text-2xl font-black mb-1 rainbow-text">Create Client Account</h3>
-      <p class="text-xs text-slate-400 mb-6">Partner with {{BUSINESS_NAME}}</p>
+      <h3 class="text-2xl font-black mb-1 rainbow-text">Register / List Property</h3>
+      <p class="text-xs text-slate-400 mb-6">Create an account with {{BUSINESS_NAME}}</p>
 
       <button onclick="alert('Redirecting to Google Sign-Up...');" class="w-full bg-white hover:bg-gray-100 text-slate-900 font-bold py-3.5 px-4 rounded-xl flex items-center justify-center space-x-3 mb-5 shadow">
         <svg class="w-5 h-5" viewBox="0 0 24 24">
@@ -881,7 +1078,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       </button>
 
       <form onsubmit="event.preventDefault(); alert('Account created successfully!');" class="space-y-3.5 text-sm">
-        <input type="text" required placeholder="Full Name / Company Name" class="w-full bg-black/50 border border-cyan-500/40 rounded-xl px-4 py-3 text-white">
+        <input type="text" required placeholder="Full Name" class="w-full bg-black/50 border border-cyan-500/40 rounded-xl px-4 py-3 text-white">
         <input type="tel" required placeholder="Mobile Number" class="w-full bg-black/50 border border-cyan-500/40 rounded-xl px-4 py-3 text-white">
         <input type="email" required placeholder="Email Address" class="w-full bg-black/50 border border-cyan-500/40 rounded-xl px-4 py-3 text-white">
         <input type="password" required placeholder="Create Password" class="w-full bg-black/50 border border-cyan-500/40 rounded-xl px-4 py-3 text-white">
@@ -895,12 +1092,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     function openModal(id) { document.getElementById(id).classList.add('modal-active'); }
     function closeModal(id) { document.getElementById(id).classList.remove('modal-active'); }
 
-    // 1. Typewriter Effect
+    // 1. Typewriter Effect (Real Estate Focus)
     const phrases = [
-      "Colorful Web, App & Cloud Ecosystems",
-      "AI Chatbots & WhatsApp Business Automation",
-      "Custom Enterprise ERP & Billing Portals",
-      "High-ROI Digital Marketing Campaigns"
+      "Luxury Penthouses & Signature Villas",
+      "RERA-Approved Residential Townships",
+      "High-ROI Commercial Offices & Retail",
+      "Clear-Title Plots & Investment Land"
     ];
     let pIdx = 0, cIdx = 0, isDel = false;
     const tw = document.getElementById("typewriter");
@@ -961,7 +1158,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       }
     }, { passive: true });
 
-    document.querySelectorAll("a, button, .interactive-card").forEach((el) => {
+    document.querySelectorAll("a, button, select, .interactive-card").forEach((el) => {
       el.addEventListener("mouseenter", () => ring && ring.classList.add("cursor-hover"), { passive: true });
       el.addEventListener("mouseleave", () => ring && ring.classList.remove("cursor-hover"), { passive: true });
     });
@@ -991,13 +1188,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
           continue;
         }
 
-        // Draw vibrant rainbow particle (Fast GPU circle)
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fillStyle = `hsla(${p.hue}, 100%, 60%, ${p.alpha})`;
         ctx.fill();
 
-        // Connect sequential trail points with smooth rainbow ribbon line
         if (i > 0) {
           const prev = particles[i - 1];
           const dx = p.x - prev.x;
@@ -1041,13 +1236,13 @@ def parse_details(text):
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
     msg = (
-        "🌈 *Ultra-Smooth Colorful Interactive Website Bot*\n\n"
-        "Ye bot *120FPS Makhan-Smooth Rainbow Cursor Trail + Multi-Color Neon Theme* wali website generate karega.\n\n"
+        "🏡 *120FPS Colorful Real Estate & Property Website Bot*\n\n"
+        "Ye bot *NexusProperty Style Real Estate Content + 120FPS Rainbow Cursor & 3D Colorful Theme* wali website generate karega.\n\n"
         "👇 *Is format me details bhejo:*\n"
-        "`Name: Uday Enterprise`\n"
-        "`Phone: +91 9288374176`\n"
-        "`Email: udayenterprise@heoo.in`\n"
-        "`Address: Bypass Road, 2nd Floor, Shantinagar Phase 3, Rewa, Madhya Pradesh 474922`"
+        "`Name: Nexus Property Solutions`\n"
+        "`Phone: +91 9876543210`\n"
+        "`Email: info@heoo.in`\n"
+        "`Address: Plot 18, 2nd Floor, Civil Lines, Rewa, Madhya Pradesh 474922`"
     )
     bot.reply_to(message, msg, parse_mode="Markdown")
 
@@ -1059,7 +1254,7 @@ def generate_site(message):
         bot.reply_to(
             message,
             "⚠️ *Saari 4 details sahi format me bhejo:*\n\n"
-            "`Name: Business Name`\n"
+            "`Name: Real Estate Company Name`\n"
             "`Phone: +91 9876543210`\n"
             "`Email: contact@heoo.in`\n"
             "`Address: Full Address with exact Pincode`",
@@ -1082,12 +1277,12 @@ def generate_site(message):
         message.chat.id,
         bio,
         caption=(
-            f"🌈 *Colorful & 120FPS Smooth Website Ready!*\n\n"
+            f"🏡 *120FPS Colorful Real Estate Website Ready!*\n\n"
             f"🏢 *Name:* {data['name']}\n"
             f"📞 *Phone:* {data['phone']}\n"
             f"📧 *Email:* {data['email']}\n"
             f"📍 *Address:* {data['address']}\n\n"
-            f"🚀 *Upgrades:* Zero-Lag GPU Cursor Trail, Rainbow Neon Gradients, Live Video & Verified Entity Box."
+            f"✨ *Includes:* Property Search Bar, 6 Featured Luxury Properties, 3 RERA New Launches, 120FPS Rainbow Cursor Trail & Verified Legal Entity Box."
         ),
         parse_mode="Markdown"
     )
@@ -1097,7 +1292,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def health():
-    return "Colorful Smooth Bot Live 24/7"
+    return "120FPS Real Estate Bot Live 24/7"
 
 if __name__ == "__main__":
     threading.Thread(
