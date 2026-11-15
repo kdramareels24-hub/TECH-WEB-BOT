@@ -32,17 +32,51 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       background-color: #fdf2f2;
       color: #b91c1c;
     }
-    .prop-card {
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    /* 120FPS GPU Cursor Canvas (No Circle/Ring) */
+    #cursor-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9998;
+      will-change: contents;
     }
-    .prop-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px -10px rgba(185, 28, 28, 0.12);
+
+    /* 3D Perspective Tilt & Spotlight Glare */
+    .tilt-3d {
+      position: relative;
+      transform-style: preserve-3d;
+      will-change: transform;
+      transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
+      overflow: hidden;
     }
+    .tilt-3d::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(420px circle at var(--glare-x, 50%) var(--glare-y, 50%), rgba(255, 255, 255, 0.35), rgba(185, 28, 28, 0.06) 40%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      pointer-events: none;
+      z-index: 5;
+    }
+    .tilt-3d:hover::after {
+      opacity: 1;
+    }
+    .tilt-3d:hover {
+      box-shadow: 0 20px 40px -10px rgba(185, 28, 28, 0.18);
+    }
+
     .modal-active { display: flex !important; }
   </style>
 </head>
 <body class="antialiased selection:bg-red-700 selection:text-white">
+
+  <!-- 120FPS GPU COLORFUL LASER TRAIL (NO MOUSE CIRCLE) -->
+  <canvas id="cursor-canvas"></canvas>
 
   <!-- EXACT NEXUS PROPERTY STICKY HEADER -->
   <header class="sticky top-0 z-40 bg-white border-b border-gray-200 shadow-sm">
@@ -102,41 +136,41 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     </div>
   </header>
 
-  <!-- HERO SECTION + IMAGE SLIDER (SCREENSHOT 1) -->
+  <!-- HERO SECTION + 3D IMAGE SLIDER (SCREENSHOT 1)[cite: 5] -->
   <section id="home" class="max-w-7xl mx-auto px-5 pt-10 pb-14">
     <div class="grid lg:grid-cols-12 gap-10 items-center">
       <div class="lg:col-span-6">
         <p class="text-[#b91c1c] text-xs sm:text-sm font-semibold uppercase tracking-[0.22em] mb-4">
-          WELCOME TO {{BUSINESS_NAME_UPPER}}
+          WELCOME TO {{BUSINESS_NAME_UPPER}}[cite: 5]
         </p>
 
         <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-bold text-gray-900 leading-[1.18] mb-6">
-          Simple Steps,<br>to Your Dream Home
+          Simple Steps,<br>to Your Dream Home[cite: 5]
         </h1>
 
         <p class="text-gray-500 text-base sm:text-[17px] leading-[1.75] mb-8 font-normal">
-          {{FIRST_WORD}} is here to help you find the best investment for your future, offering premium homes in prime locations with world-class amenities. Invest with confidence in properties that deliver comfort, quality, long-term value, and growth.
+          {{FIRST_WORD}} is here to help you find the best investment for your future, offering premium homes in prime locations with world-class amenities. Invest with confidence in properties that deliver comfort, quality, long-term value, and growth.[cite: 5]
         </p>
 
         <div class="grid grid-cols-2 gap-4 max-w-md mb-10">
-          <a href="#properties" class="nexus-bg-red text-white font-medium text-sm sm:text-base py-4 px-5 rounded-xl text-center shadow-sm transition">
-            Explore Properties
+          <a href="#properties" class="tilt-3d nexus-bg-red text-white font-medium text-sm sm:text-base py-4 px-5 rounded-xl text-center shadow-sm transition">
+            Explore Properties[cite: 5]
           </a>
-          <a href="#contact" class="bg-white text-gray-900 border-[1.5px] border-gray-900 hover:bg-gray-900 hover:text-white font-medium text-sm sm:text-base py-4 px-5 rounded-xl text-center transition">
-            Contact Us
+          <a href="#contact" class="tilt-3d bg-white text-gray-900 border-[1.5px] border-gray-900 hover:bg-gray-900 hover:text-white font-medium text-sm sm:text-base py-4 px-5 rounded-xl text-center transition">
+            Contact Us[cite: 5]
           </a>
         </div>
       </div>
 
-      <!-- Image Carousel Slider with < and > Arrows -->
+      <!-- Image Carousel Slider with < and > Arrows (Screenshot 1)[cite: 5] -->
       <div class="lg:col-span-6">
-        <div class="relative rounded-2xl overflow-hidden shadow-lg group bg-gray-100 h-[300px] sm:h-[400px]">
+        <div class="tilt-3d relative rounded-2xl overflow-hidden shadow-lg bg-gray-100 h-[300px] sm:h-[400px]">
           <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-100">
             <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85" alt="Srishti Greens" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
-              <span class="bg-[#b91c1c] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded w-max mb-2">Plots For A Brighter Tomorrow</span>
-              <h3 class="text-2xl sm:text-3xl font-extrabold tracking-wide">SRISHTI GREENS</h3>
-              <p class="text-xs text-gray-200 uppercase tracking-widest">A Modern Living Destination • Gated Plots & Villas</p>
+              <span class="bg-[#b91c1c] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded w-max mb-2">Plots For A Brighter Tomorrow[cite: 5]</span>
+              <h3 class="text-2xl sm:text-3xl font-extrabold tracking-wide">SRISHTI GREENS[cite: 5]</h3>
+              <p class="text-xs text-gray-200 uppercase tracking-widest">A Modern Living Destination • Gated Plots & Villas[cite: 5]</p>
             </div>
           </div>
 
@@ -163,19 +197,19 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <!-- TRUST STATS -->
   <section class="bg-gray-50 border-y border-gray-200 py-12 px-5">
     <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-      <div>
+      <div class="tilt-3d p-4">
         <div class="text-3xl sm:text-4xl font-extrabold text-[#b91c1c] mb-1">1,200+</div>
         <div class="text-xs font-semibold uppercase tracking-wider text-gray-500">Happy Families</div>
       </div>
-      <div>
+      <div class="tilt-3d p-4">
         <div class="text-3xl sm:text-4xl font-extrabold text-[#b91c1c] mb-1">25+</div>
         <div class="text-xs font-semibold uppercase tracking-wider text-gray-500">Prime Projects</div>
       </div>
-      <div>
+      <div class="tilt-3d p-4">
         <div class="text-3xl sm:text-4xl font-extrabold text-[#b91c1c] mb-1">100%</div>
         <div class="text-xs font-semibold uppercase tracking-wider text-gray-500">Clear Title & Registry</div>
       </div>
-      <div>
+      <div class="tilt-3d p-4">
         <div class="text-3xl sm:text-4xl font-extrabold text-[#b91c1c] mb-1">12+ Yrs</div>
         <div class="text-xs font-semibold uppercase tracking-wider text-gray-500">Real Estate Excellence</div>
       </div>
@@ -190,15 +224,15 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="prop-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+      <div class="tilt-3d bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
         <div class="relative h-64"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=85" class="w-full h-full object-cover"></div>
         <div class="p-6"><h3 class="text-xl font-bold text-gray-900 mb-1">Srishti Greens Township</h3><p class="text-xs text-gray-500 mb-4"><i class="fa-solid fa-location-dot text-[#b91c1c] mr-1"></i> Prime Highway Corridor</p></div>
       </div>
-      <div class="prop-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+      <div class="tilt-3d bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
         <div class="relative h-64"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=85" class="w-full h-full object-cover"></div>
         <div class="p-6"><h3 class="text-xl font-bold text-gray-900 mb-1">Royal Palm Independent Villas</h3><p class="text-xs text-gray-500 mb-4"><i class="fa-solid fa-location-dot text-[#b91c1c] mr-1"></i> Green Luxury Sector</p></div>
       </div>
-      <div class="prop-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+      <div class="tilt-3d bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
         <div class="relative h-64"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=85" class="w-full h-full object-cover"></div>
         <div class="p-6"><h3 class="text-xl font-bold text-gray-900 mb-1">Skyline Grand Residency</h3><p class="text-xs text-gray-500 mb-4"><i class="fa-solid fa-location-dot text-[#b91c1c] mr-1"></i> Main Metro Connectivity</p></div>
       </div>
@@ -214,8 +248,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <p class="text-gray-500 text-base leading-relaxed mb-6"><strong>{{BUSINESS_NAME}}</strong> is a premier real estate consultancy headquartered at <strong>{{ADDRESS}}</strong>.</p>
       </div>
       <div class="lg:col-span-6 grid grid-cols-2 gap-4">
-        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=85" class="rounded-2xl shadow-md h-64 w-full object-cover">
-        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=700&q=85" class="rounded-2xl shadow-md h-64 w-full object-cover mt-6">
+        <div class="tilt-3d rounded-2xl shadow-md h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=85" class="w-full h-full object-cover"></div>
+        <div class="tilt-3d rounded-2xl shadow-md h-64 overflow-hidden mt-6"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=700&q=85" class="w-full h-full object-cover"></div>
       </div>
     </div>
   </section>
@@ -224,73 +258,73 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <section id="gallery" class="py-16 px-5 max-w-7xl mx-auto">
     <div class="mb-10"><p class="text-[#b91c1c] text-xs font-semibold uppercase tracking-[0.22em] mb-2">SITE GALLERY</p><h2 class="text-3xl font-bold text-gray-900">Actual Site Photos</h2></div>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-      <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=700&q=85" class="rounded-2xl h-56 w-full object-cover">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=85" class="rounded-2xl h-56 w-full object-cover">
-      <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=700&q=85" class="rounded-2xl h-56 w-full object-cover">
-      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=85" class="rounded-2xl h-56 w-full object-cover">
+      <div class="tilt-3d rounded-2xl h-56 overflow-hidden shadow-sm"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=700&q=85" class="w-full h-full object-cover"></div>
+      <div class="tilt-3d rounded-2xl h-56 overflow-hidden shadow-sm"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=85" class="w-full h-full object-cover"></div>
+      <div class="tilt-3d rounded-2xl h-56 overflow-hidden shadow-sm"><img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=700&q=85" class="w-full h-full object-cover"></div>
+      <div class="tilt-3d rounded-2xl h-56 overflow-hidden shadow-sm"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=85" class="w-full h-full object-cover"></div>
     </div>
   </section>
 
-  <!-- GET IN TOUCH & CONSULTATION FORM (SCREENSHOT 2 & 3) -->
+  <!-- GET IN TOUCH & CONSULTATION FORM (SCREENSHOT 2 & 3)[cite: 6, 7] -->
   <section id="contact" class="py-16 px-5 max-w-7xl mx-auto border-t border-gray-100">
     <div class="grid lg:grid-cols-12 gap-12 items-start">
       <div class="lg:col-span-6">
-        <p class="text-[#b91c1c] text-xs sm:text-sm font-semibold uppercase tracking-[0.22em] mb-3">GET IN TOUCH</p>
-        <h2 class="text-4xl sm:text-[44px] font-bold text-gray-900 leading-[1.18] mb-5">Let's Find Your<br>Dream Home</h2>
-        <p class="text-gray-500 text-base sm:text-[17px] leading-[1.75] mb-10">Reach out to our team of experts for personalised assistance with finding your perfect luxury property.</p>
+        <p class="text-[#b91c1c] text-xs sm:text-sm font-semibold uppercase tracking-[0.22em] mb-3">GET IN TOUCH[cite: 6]</p>
+        <h2 class="text-4xl sm:text-[44px] font-bold text-gray-900 leading-[1.18] mb-5">Let's Find Your<br>Dream Home[cite: 6]</h2>
+        <p class="text-gray-500 text-base sm:text-[17px] leading-[1.75] mb-10">Reach out to our team of experts for personalised assistance with finding your perfect luxury property.[cite: 6]</p>
 
         <div class="space-y-8">
           <div class="flex items-start space-x-5">
-            <div class="w-14 h-14 rounded-2xl nexus-icon-box flex items-center justify-center flex-shrink-0">
+            <div class="tilt-3d w-14 h-14 rounded-2xl nexus-icon-box flex items-center justify-center flex-shrink-0">
               <svg class="w-8 h-8 text-[#b91c1c]" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-4.5-4.5-7-8.2-7-11.5a7 7 0 1114 0c0 3.3-2.5 7-7 11.5z"/><circle cx="12" cy="9.5" r="2.8" stroke="currentColor" stroke-width="2.2"/></svg>
             </div>
             <div>
-              <h3 class="text-lg font-bold text-gray-900 mb-1">Head Office</h3>
-              <p class="text-gray-500 text-base leading-relaxed mb-3">{{ADDRESS}}</p>
-              <h4 class="text-lg font-bold text-gray-900 mb-1">Our Branches</h4>
-              <p class="text-gray-500 text-base">Nangloi, Pahladpur, Dwarka</p>
+              <h3 class="text-lg font-bold text-gray-900 mb-1">Head Office[cite: 6]</h3>
+              <p class="text-gray-500 text-base leading-relaxed mb-3">{{ADDRESS}}[cite: 6]</p>
+              <h4 class="text-lg font-bold text-gray-900 mb-1">Our Branches[cite: 6]</h4>
+              <p class="text-gray-500 text-base">Nangloi, Pahladpur, Dwarka[cite: 6]</p>
             </div>
           </div>
 
           <div class="flex items-start space-x-5">
-            <div class="w-14 h-14 rounded-2xl nexus-icon-box flex items-center justify-center flex-shrink-0">
+            <div class="tilt-3d w-14 h-14 rounded-2xl nexus-icon-box flex items-center justify-center flex-shrink-0">
               <i class="fa-solid fa-phone-volume text-2xl text-[#b91c1c]"></i>
             </div>
             <div>
-              <h3 class="text-lg font-bold text-gray-900 mb-1">Phone</h3>
-              <a href="tel:{{PHONE}}" class="text-gray-500 hover:text-[#b91c1c] text-base transition">{{PHONE}}</a>
+              <h3 class="text-lg font-bold text-gray-900 mb-1">Phone[cite: 6]</h3>
+              <a href="tel:{{PHONE}}" class="text-gray-500 hover:text-[#b91c1c] text-base transition">{{PHONE}}[cite: 6]</a>
             </div>
           </div>
 
           <div class="flex items-start space-x-5">
-            <div class="w-14 h-14 rounded-2xl nexus-icon-box flex items-center justify-center flex-shrink-0">
+            <div class="tilt-3d w-14 h-14 rounded-2xl nexus-icon-box flex items-center justify-center flex-shrink-0">
               <i class="fa-regular fa-envelope text-2xl text-[#b91c1c]"></i>
             </div>
             <div>
-              <h3 class="text-lg font-bold text-gray-900 mb-1">Email</h3>
-              <a href="mailto:{{EMAIL}}" class="text-gray-500 hover:text-[#b91c1c] text-base break-all transition">{{EMAIL}}</a>
+              <h3 class="text-lg font-bold text-gray-900 mb-1">Email[cite: 6]</h3>
+              <a href="mailto:{{EMAIL}}" class="text-gray-500 hover:text-[#b91c1c] text-base break-all transition">{{EMAIL}}[cite: 6]</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- CONSULTATION FORM -->
+      <!-- CONSULTATION FORM (SCREENSHOT 3)[cite: 7] -->
       <div class="lg:col-span-6">
-        <div class="bg-white rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-gray-100 p-6 sm:p-10">
-          <h3 class="text-2xl sm:text-[26px] font-bold text-gray-900 mb-6">Book a Free Consultation</h3>
+        <div class="tilt-3d bg-white rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-gray-100 p-6 sm:p-10">
+          <h3 class="text-2xl sm:text-[26px] font-bold text-gray-900 mb-6">Book a Free Consultation[cite: 7]</h3>
           <form onsubmit="event.preventDefault(); alert('Thank you! Our team at {{BUSINESS_NAME}} will contact you shortly.');" class="space-y-4">
-            <input type="text" required placeholder="Your Full Name" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 text-gray-800 text-sm focus:outline-none focus:border-[#b91c1c]">
-            <input type="email" required placeholder="Email Address" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 text-gray-800 text-sm focus:outline-none focus:border-[#b91c1c]">
-            <input type="tel" required placeholder="Phone Number" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 text-gray-800 text-sm focus:outline-none focus:border-[#b91c1c]">
+            <input type="text" required placeholder="Your Full Name[cite: 7]" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 text-gray-800 text-sm focus:outline-none focus:border-[#b91c1c]">
+            <input type="email" required placeholder="Email Address[cite: 7]" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 text-gray-800 text-sm focus:outline-none focus:border-[#b91c1c]">
+            <input type="tel" required placeholder="Phone Number[cite: 7]" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 text-gray-800 text-sm focus:outline-none focus:border-[#b91c1c]">
             <select required class="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 text-gray-700 text-sm focus:outline-none focus:border-[#b91c1c]">
-              <option value="" disabled selected>Select Property Type</option>
+              <option value="" disabled selected>Select Property Type[cite: 7]</option>
               <option>Residential Plot (Srishti Greens)</option>
               <option>Luxury Villa / Independent House</option>
               <option>2 / 3 / 4 BHK Apartment</option>
               <option>Commercial Shop / Office Space</option>
             </select>
-            <textarea rows="4" placeholder="Your Message" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 text-gray-800 text-sm focus:outline-none focus:border-[#b91c1c]"></textarea>
-            <button type="submit" class="w-full nexus-bg-red text-white font-semibold text-base py-4 rounded-xl shadow-md transition">Send Message</button>
+            <textarea rows="4" placeholder="Your Message[cite: 7]" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 text-gray-800 text-sm focus:outline-none focus:border-[#b91c1c]"></textarea>
+            <button type="submit" class="w-full nexus-bg-red text-white font-semibold text-base py-4 rounded-xl shadow-md transition">Send Message[cite: 7]</button>
           </form>
         </div>
       </div>
@@ -319,14 +353,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     </div>
   </footer>
 
-  <!-- FIXED BOTTOM APP BAR -->
+  <!-- FIXED BOTTOM APP BAR[cite: 5, 6, 7] -->
   <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 py-2.5 px-2 z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
     <div class="max-w-md mx-auto grid grid-cols-5 text-center">
-      <a href="#home" class="flex flex-col items-center justify-center text-[#b91c1c]"><i class="fa-solid fa-house text-lg mb-1"></i><span class="text-[11px] font-medium">Home</span></a>
-      <a href="#properties" class="flex flex-col items-center justify-center text-gray-800 hover:text-[#b91c1c] transition"><i class="fa-solid fa-building text-lg mb-1"></i><span class="text-[11px] font-medium">Properties</span></a>
-      <a href="#about" class="flex flex-col items-center justify-center text-gray-800 hover:text-[#b91c1c] transition"><i class="fa-solid fa-user text-lg mb-1"></i><span class="text-[11px] font-medium">About</span></a>
-      <a href="#gallery" class="flex flex-col items-center justify-center text-gray-800 hover:text-[#b91c1c] transition"><i class="fa-regular fa-image text-lg mb-1"></i><span class="text-[11px] font-medium">Gallery</span></a>
-      <a href="#contact" class="flex flex-col items-center justify-center text-gray-800 hover:text-[#b91c1c] transition"><i class="fa-solid fa-phone text-lg mb-1"></i><span class="text-[11px] font-medium">Contact</span></a>
+      <a href="#home" class="flex flex-col items-center justify-center text-[#b91c1c]"><i class="fa-solid fa-house text-lg mb-1"></i><span class="text-[11px] font-medium">Home[cite: 5, 6, 7]</span></a>
+      <a href="#properties" class="flex flex-col items-center justify-center text-gray-800 hover:text-[#b91c1c] transition"><i class="fa-solid fa-building text-lg mb-1"></i><span class="text-[11px] font-medium">Properties[cite: 5, 6, 7]</span></a>
+      <a href="#about" class="flex flex-col items-center justify-center text-gray-800 hover:text-[#b91c1c] transition"><i class="fa-solid fa-user text-lg mb-1"></i><span class="text-[11px] font-medium">About[cite: 5, 6, 7]</span></a>
+      <a href="#gallery" class="flex flex-col items-center justify-center text-gray-800 hover:text-[#b91c1c] transition"><i class="fa-regular fa-image text-lg mb-1"></i><span class="text-[11px] font-medium">Gallery[cite: 5, 6, 7]</span></a>
+      <a href="#contact" class="flex flex-col items-center justify-center text-gray-800 hover:text-[#b91c1c] transition"><i class="fa-solid fa-phone text-lg mb-1"></i><span class="text-[11px] font-medium">Contact[cite: 5, 6, 7]</span></a>
     </div>
   </nav>
 
@@ -344,6 +378,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     </div>
   </div>
 
+  <!-- 120FPS 3D TILT & SMOOTH LASER TRAIL (NO MOUSE CIRCLE) -->
   <script>
     function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
     function openModal(id) { document.getElementById(id).classList.add('modal-active'); }
@@ -357,6 +392,77 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       slides[currentSlide].style.opacity = '1';
     }
     setInterval(() => changeSlide(1), 4500);
+
+    // 3D Card Tilt on Hover
+    document.querySelectorAll(".tilt-3d").forEach((card) => {
+      card.addEventListener("mousemove", (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty("--glare-x", x + "px");
+        card.style.setProperty("--glare-y", y + "px");
+        const rotateY = ((x / rect.width) - 0.5) * 6;
+        const rotateX = ((y / rect.height) - 0.5) * -6;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.01, 1.01, 1.01)`;
+      }, { passive: true });
+
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+      }, { passive: true });
+    });
+
+    // 120FPS Laser Sparkle Trail (No mouse tracking circle)
+    const canvas = document.getElementById("cursor-canvas");
+    const ctx = canvas.getContext("2d", { alpha: true });
+    let particles = [];
+    let lastSpawn = 0;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener("resize", resizeCanvas, { passive: true });
+    resizeCanvas();
+
+    window.addEventListener("mousemove", (e) => {
+      const now = performance.now();
+      if (now - lastSpawn > 18) {
+        lastSpawn = now;
+        particles.push({
+          x: e.clientX,
+          y: e.clientY,
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2,
+          size: Math.random() * 3 + 1,
+          alpha: 0.8,
+          color: Math.random() > 0.4 ? "#b91c1c" : "#f59e0b"
+        });
+        if (particles.length > 35) particles.shift();
+      }
+    }, { passive: true });
+
+    function renderParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.alpha -= 0.03;
+        if (p.alpha <= 0) {
+          particles.splice(i, 1);
+          i--;
+          continue;
+        }
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = p.alpha;
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(renderParticles);
+    }
+    requestAnimationFrame(renderParticles);
   </script>
 </body>
 </html>"""
@@ -389,8 +495,7 @@ def split_business_name(name):
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
     msg = (
-        "🏠 *Clean NexusProperty Clone Bot*\n\n"
-        "Ye bilkul asli `nexusproperty.in` jaisi clean white website banayega bina kisi cursor circle ke.\n\n"
+        "🏠 *NexusProperty Exact Clone + 3D Tilt (No Cursor Circle)*\n\n"
         "👇 *Is format me details bhejo:*\n"
         "`Name: Nexus Property`\n"
         "`Phone: +91-98108 90055`\n"
@@ -407,9 +512,9 @@ def generate_site(message):
         bot.reply_to(
             message,
             "⚠️ *Saari 4 details sahi format me bhejo:*\n\n"
-            "`Name: Business Name`\n"
-            "`Phone: +91 9876543210`\n"
-            "`Email: contact@heoo.in`\n"
+            "`Name: Nexus Property`\n"
+            "`Phone: +91-98108 90055`\n"
+            "`Email: info@heoo.in`\n"
             "`Address: Full Office Address`",
             parse_mode="Markdown"
         )
@@ -435,7 +540,7 @@ def generate_site(message):
         message.chat.id,
         bio,
         caption=(
-            f"✅ *Clean NexusProperty Clone Ready (No Cursor Circle)*\n\n"
+            f"✅ *NexusProperty Clone Ready (No Cursor Circle)*\n\n"
             f"🏠 *Name:* {data['name']}\n"
             f"📞 *Phone:* {data['phone']}\n"
             f"📧 *Email:* {data['email']}\n"
@@ -449,7 +554,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def health():
-    return "Clean NexusProperty Clone Bot Live 24/7"
+    return "Clean 3D NexusProperty Bot Live 24/7"
 
 if __name__ == "__main__":
     threading.Thread(
